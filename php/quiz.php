@@ -17,10 +17,9 @@
         echo '<script type="text/javascript" src="../js/qz.js"></script>';
         echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
     ?>
+    <timer-area>
+    </timer-area>
     <quiz-area>
-        <timer-area>
-        </timer-area>
-
         <questions-idx id="question-idx">
             <script>
                 generateQuestionIndex();
@@ -32,10 +31,11 @@
         </question-area>
 
         <answer-area id="answer-area">
-            <script>
-
-            </script>
+            Options will be provided here.
         </answer-area>
     </quiz-area>
+
+    <submission-area id="submission-area">
+    </submission-area>
 </body>
 </html>
