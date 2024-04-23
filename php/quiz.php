@@ -10,24 +10,22 @@
     <title>QUIZ</title>
 </head>
 <body>
+    <script type="text/javascript" src="../js/qz.js"></script>
     <?php
-        $questionsTotal = count($items);
-        $currentQuestionNumber = 0;
-
-        echo '<script type="text/javascript" src="../js/qz.js"></script>';
         echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
     ?>
+    <script>initUserResponse()</script>
     <timer-area>
     </timer-area>
     <quiz-area>
         <questions-idx id="question-idx">
             <script>
-                generateQuestionIndex();
+                generateQuestionIndex("questionIndexGroup");
             </script>
         </questions-idx>
 
         <question-area id="question-area">
-            Please click any number above. The question will appear here. 
+            The question will be displayed here.
         </question-area>
 
         <answer-area id="answer-area">
@@ -36,6 +34,14 @@
     </quiz-area>
 
     <submission-area id="submission-area">
+        <button type="button" onclick="
+            console.clear();
+            for(let index = 0; index < Object.keys(userResponseJSON).length; index++) {
+                if(userResponseJSON[index].checkedOption){
+                    console.log(userResponseJSON[index]);
+                }
+            }
+        ">OUTPUT USER JSON</button>
     </submission-area>
 </body>
 </html>

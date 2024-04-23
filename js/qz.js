@@ -1,10 +1,34 @@
-let itemObject = null;
+let itemObject = new Object();
+let userResponseJSON = new Object();
 /**
- * Initialize an object from the server as json object.
+ * Initialize a json object from the server as object.
  * @param {Object} serverObject an object from server.
  */
 function initItemObject(serverObject){
-    itemObject = serverObject;
+    for (let index = 0; index < Object.keys(serverObject).length; index++) {
+        itemObject[index] = {
+            question: serverObject[index].question,
+            options: new Object()
+        }
+        for (let optionIndex = 0; optionIndex < Object.keys(serverObject[index].options).length; optionIndex++) {
+            itemObject[index].options[optionIndex] = serverObject[index].options[optionIndex].option;
+        }
+    }
+    console.log(itemObject);
+    initUserResponse();
+}
+
+/**
+ * Initialize an object to record user answers.
+ */
+function initUserResponse(){
+    for (let index = 0; index < Object.keys(itemObject).length; index++) {
+        userResponseJSON[index] = {
+            question: itemObject[index].question,
+            checkedOption: "",
+            optionText: ""
+        }
+    }
 }
 
 /**
@@ -20,32 +44,13 @@ function getItemQuestion(index){
 }
 
 /**
- * Modifiy a specific html element's text with another text.
- * @param {String} elementId The id of html element.
- * @param {String} text The text for the elementId.
+ * Generate index number along with questions and options.
+ * @param {String} radioGroupNameReference 
  */
-function setElementText(elementId, text){
-    let elementText = document.getElementById(elementId);
-    elementText.textContent = text;
-}
-
-/**
- * Get an option from item's options based on optionIndex and questionIndex.
- * @param {Number} questionIndex An integer starting from 0.
- * @param {Number} optionIndex An integer starting from 0.
- * @returns Item's option in string format.
- */
-function getItemOptions(questionIndex, optionIndex){
-    let itemOptionObject = itemObject[questionIndex].options;
-    let itemOption = itemOptionObject[optionIndex].option;
-    return itemOption;
-}
-
-function generateQuestionIndex() {
+function generateQuestionIndex(radioGroupNameReference) {
     let fragment = new DocumentFragment();
     let idRef = "question-idx";
     let iterationLimit = Object.keys(itemObject).length;
-    let radioGroupName = "questionIndexGroup";
     let radioIdentity = "q-";
 
     for (let index = 0; index < iterationLimit; index++) {
@@ -54,9 +59,9 @@ function generateQuestionIndex() {
         let radioLabel = document.createElement("label");
 
         radioInputElement.setAttribute("type", "radio");
-        radioInputElement.setAttribute("name", radioGroupName);
+        radioInputElement.setAttribute("name", radioGroupNameReference);
         radioInputElement.setAttribute("id", radioIdentity+correctedIndex);
-        radioInputElement.setAttribute("value", radioIdentity+index);
+        radioInputElement.setAttribute("value", index);
         radioLabel.setAttribute("for", radioIdentity+correctedIndex);
         radioLabel.textContent = correctedIndex;
 
@@ -66,6 +71,13 @@ function generateQuestionIndex() {
             let questIndex = Number(radioInputElement.getAttribute("id").replace(radioIdentity,"")) - 1;
             questionArea.textContent = itemObject[questIndex].question;
             generateOptions(questIndex);
+
+            let allAnswerRadio = document.getElementsByName("answerGroup");
+            allAnswerRadio.forEach(answerRadio => {
+                if(answerRadio.getAttribute("value") === userResponseJSON[index].checkedOption) {
+                    answerRadio.checked = true;
+                };
+            });
         });
         divEl.append(radioInputElement);
         divEl.append(radioLabel);
@@ -76,6 +88,10 @@ function generateQuestionIndex() {
     document.getElementById(idRef).append(fragment);
 }
 
+/**
+ * Generate available options based on questionIndex.
+ * @param {Number} questionIndex An integer starting from 0.
+ */
 function generateOptions(questionIndex){
     let fragment = new DocumentFragment();
     let idRef = "answer-area";
@@ -94,16 +110,18 @@ function generateOptions(questionIndex){
         radioInputElement.setAttribute("type", "radio");
         radioInputElement.setAttribute("name", radioGroupName);
         radioInputElement.setAttribute("id", radioIdentity+correctedIndex);
-        radioInputElement.setAttribute("value", radioIdentity+index);
+        radioInputElement.setAttribute("value", index);
         radioLabel.setAttribute("for", radioIdentity+correctedIndex);
-        radioLabel.textContent = itemObject[questionIndex].options[index].option;
+        radioLabel.setAttribute("id", "optLabel-"+radioIdentity+correctedIndex);
+        radioLabel.textContent = itemObject[questionIndex].options[index];
 
         let divEl = document.createElement("div");
         radioInputElement.addEventListener("change", () => {
-            let allRadio = document.getElementsByName(radioGroupName);
-            allRadio.forEach(thisRadio => {
-                if(thisRadio.checked){
-                    console.log(thisRadio.getAttribute("value"));
+            let allAnswerRadio = document.getElementsByName(radioGroupName);
+            allAnswerRadio.forEach(answerRadio => {
+                if(answerRadio.checked){
+                    userResponseJSON[questionIndex].checkedOption = answerRadio.getAttribute("value");
+                    userResponseJSON[questionIndex].optionText = document.getElementById("optLabel-"+answerRadio.id).textContent;
                 }
             });
         })
