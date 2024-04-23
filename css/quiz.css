@@ -1,0 +1,58 @@
+/* set correct box model */
+* {
+    box-sizing:border-box;
+}
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+quiz-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+quiz-area > * {
+    width: 100%;
+    padding:calc(8px + 1.5625vw);
+    align-items: center;
+    justify-content: center;
+}
+questions-idx {
+    display: flex;
+    flex-wrap: wrap;
+}
+questions-idx > div input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+questions-idx > div input[type="radio"]:checked + label {
+    border-width: 0.1rem;
+    border-style: dashed;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    background-color: azure;
+}
+questions-idx > div input[type="radio"]:focus + label {
+    border-width: 0.1rem;
+    border-style: dashed;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    background-color: azure;
+}
+answer-area {
+    flex-wrap: wrap;
+}
+answer-area > div input[type="submit"] {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    width: 0;
+}
+answer-area > div input[type="submit"]:focus + label {
+    border-width: 0.1rem;
+    border-style: dashed;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    background-color: azure;
+} 
