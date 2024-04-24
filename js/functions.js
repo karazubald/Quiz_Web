@@ -98,9 +98,6 @@ function generateOptions(questionIndex){
     let iterationLimit = Object.keys(itemObject[questionIndex].options).length;
     let radioGroupName = "answerGroup";
     let radioIdentity = "opt-";
-    let formElement = document.createElement("form");
-    formElement.setAttribute("method", "post");
-    formElement.setAttribute("action", "quiz.php");
 
     for (let index = 0; index < iterationLimit; index++) {
         let correctedIndex = index+1;
@@ -128,10 +125,29 @@ function generateOptions(questionIndex){
         divEl.append(radioInputElement);
         divEl.append(radioLabel);
 
-        formElement.append(divEl);
-        fragment.append(formElement);
+        fragment.append(divEl);
     }
 
     document.getElementById(idRef).innerHTML = "";
     document.getElementById(idRef).append(fragment);
+}
+
+// TODO: Send userResponse to result.php
+// TODO: Display the value of userResponse from result.php to console
+function sendUserResponse(){
+    let targetPHP = "result.php";
+    let responseData = JSON.stringify(userResponseJSON);
+    fetch(targetPHP, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: responseData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json()
+    })
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
 }

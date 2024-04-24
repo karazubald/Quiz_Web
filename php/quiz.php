@@ -10,7 +10,7 @@
     <title>QUIZ</title>
 </head>
 <body>
-    <script type="text/javascript" src="../js/qz.js"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
     <?php
         echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
     ?>
@@ -42,6 +42,9 @@
                 }
             }
         ">OUTPUT USER JSON</button>
+        <button type="button" onclick="sendUserResponse()">
+            SEND DATA
+        </button>
     </submission-area>
 </body>
 </html>
