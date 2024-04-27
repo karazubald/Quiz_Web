@@ -2,6 +2,8 @@
 // Menampilkan dan melaporkan error
 error_reporting(E_ALL);
 ini_set('display_errors', true);
+//header('Location:require/login.php');
+//echo '<script>window.location = "require/login.php"</script>';
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +37,7 @@ ini_set('display_errors', true);
             </div>
             <div>
                 <button class="quiz-btn" type="button">
-                    <a href="php/quiz.php">Test_QUIZ</a>
+                    <a href="require/quiz.php">Test_QUIZ</a>
                 </button>
             </div>
         </section>

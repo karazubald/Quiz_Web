@@ -2,19 +2,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 
-// if button submit is pressed, evaluate $_POST variable
-if( isset($_POST["login"]) ) {
+    // if button submit is pressed, evaluate $_POST variable
+if( isset($_POST["submit"]) ) {
     // cek username & password
     if( $_POST["usrname"] == "admin" && $_POST["passwd"] == "123" ) {
         // TODO: redirect to index php outside require folder!
-        //echo '<script>console.log("isSet");</script>';
-        //echo "<script type='text/javascript'>window.location.replace = '../index.php'</script>";
-        header('Location:../index.php');
+        //echo '<script type="text/javascript">window.location = "index.php"</script>';
+        header('Location:index.php');
         exit;
-    } else {
-        // Jika salah, tampilkan pesan kesalahan
-        //echo 'Terjadi kesalahan!';
-    }
+}
 }
 ?>
 <!DOCTYPE html>
@@ -27,10 +23,10 @@ if( isset($_POST["login"]) ) {
 </head>
 <body>
     <single-box>
-        <form action="" method="post">
+        <form action="" method="POST">
             <input type="text" name="usrname" id="usrname" placeholder="Your Username">
-            <input type="password" name="passwd" id="passwd" placeholder="Your Password">
-            <button type="submit" name="login">Login</button>
+            <input type="text" name="passwd" id="passwd" placeholder="Your Password">
+            <button type="submit" name="submit" value="login">Login</button>
         </form>
     </single-box>
 </body>
