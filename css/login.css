@@ -1,0 +1,14 @@
+/* set correct box model */
+* {
+    box-sizing:border-box;
+}
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+single-box {
+    display:flex;
+}
+single-box > * {
+    width:100%;
+    padding:calc(8px + 1.5625vw);
+}

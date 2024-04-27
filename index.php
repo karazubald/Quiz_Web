@@ -1,3 +1,9 @@
+<?php
+// Menampilkan dan melaporkan error
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
