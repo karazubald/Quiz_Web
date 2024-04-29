@@ -1,5 +1,6 @@
 let itemObject = new Object();
 let userResponseJSON = new Object();
+
 /**
  * Initialize a json object from the server as object.
  * @param {Object} serverObject an object from server.
@@ -132,8 +133,6 @@ function generateOptions(questionIndex){
     document.getElementById(idRef).append(fragment);
 }
 
-// TODO: Send userResponse to result.php
-// TODO: Display the value of userResponse from result.php to console
 function sendUserResponse(){
     let targetPHP = "result.php";
     let responseData = JSON.stringify(userResponseJSON);

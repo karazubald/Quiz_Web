@@ -4,9 +4,9 @@ ini_set('display_errors', true);
 require 'require/functions.php';
 // if button submit is pressed, evaluate $_POST variable
 if( isset($_POST["submit"]) ) {
-    $csvRef = "csv/dataref.csv"; // csv reference
-    $user = checkDataRef($csvRef, $_POST["usrname"]);
-    $passwd = checkDataRef($csvRef, md5($_POST["passwd"], false));
+    $jsonRef = "data/dataref.json"; // json reference
+    $user = checkDataRef($jsonRef, $_POST["usrname"]);
+    $passwd = checkDataRef($jsonRef, md5($_POST["passwd"], false));
 
     if($user && $passwd) {
         header('Location:index.php');

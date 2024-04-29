@@ -1,0 +1,7 @@
+{
+    "admin" : {
+        "questionTotal" : [50, 50],
+        "correctAnswer" : [25, 12],
+        "scores" : [0.50, 0.24]
+    }
+}
