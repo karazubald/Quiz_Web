@@ -1,16 +1,19 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', true);
-
-    // if button submit is pressed, evaluate $_POST variable
+require 'require/functions.php';
+// if button submit is pressed, evaluate $_POST variable
 if( isset($_POST["submit"]) ) {
-    // cek username & password
-    if( $_POST["usrname"] == "admin" && $_POST["passwd"] == "123" ) {
-        // TODO: redirect to index php outside require folder!
-        //echo '<script type="text/javascript">window.location = "index.php"</script>';
+    $csvRef = "csv/dataref.csv"; // csv reference
+    $user = checkDataRef($csvRef, $_POST["usrname"]);
+    $passwd = checkDataRef($csvRef, md5($_POST["passwd"], false));
+
+    if($user && $passwd) {
         header('Location:index.php');
         exit;
-}
+    } else {
+        echo '<script>console.log("Data not found!")</script>';
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -19,7 +22,7 @@ if( isset($_POST["submit"]) ) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
 </head>
 <body>
     <single-box>
