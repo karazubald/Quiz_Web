@@ -16,19 +16,20 @@ if(!isset($_SESSION["usrname"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>KAZ-SITE</title>
+    <title>VANILLA QUIZ WEB APPLICATION</title>
     <script src="js/functions.js"></script>
 </head>
 <body>
     <holy-grail-flexbox>
         <header class="header">
-            Welcome to Kaz Website.
+            Vanilla Quiz Web Application
         </header>
 
         <main class="main-content">
             <card-box>
-                Content and statistics area
-                <!-- Code here for cardbox view -->
+                <button class="quiz-btn" type="button" onclick='window.location = "require/quiz.php"'>
+                    Test_QUIZ
+                </button>
             </card-box>
         </main>
 
@@ -36,15 +37,9 @@ if(!isset($_SESSION["usrname"])){
             <greet-user>
                 Greetings, <?= $_SESSION["usrname"] ?>!
             </greet-user>
-
             <div>
                 <button class="login-btn" type="button" onclick='window.location = "require/login.php"'>
                     <?php echo setLogButtonText($_SESSION["usrname"]) ?>
-                </button>
-            </div>
-            <div>
-                <button class="quiz-btn" type="button" onclick='window.location = "require/quiz.php"'>
-                    Test_QUIZ
                 </button>
             </div>
         </section>

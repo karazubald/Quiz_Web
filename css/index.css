@@ -24,10 +24,24 @@ holy-grail-flexbox > .header {
     justify-content: center;
     background:#f97171;
 }
-holy-grail-flexbox > .main-content {background:#fff}
-holy-grail-flexbox > .left-sidebar {background:#f5d55f}
-holy-grail-flexbox > .right-sidebar {background:#c5ed77}
-holy-grail-flexbox > .footer {background:#72c2f1}
+holy-grail-flexbox > .main-content {
+    background:#fff;
+}
+holy-grail-flexbox > .left-sidebar {
+    background:#f5d55f
+}
+holy-grail-flexbox > .right-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#c5ed77
+}
+holy-grail-flexbox > .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#72c2f1;
+}
 .main-content > * {
     display: flex;
     align-items: center;
@@ -36,6 +50,23 @@ holy-grail-flexbox > .footer {background:#72c2f1}
 card-box {
     align-items: center;
     justify-content: center;
+}
+card-box > button {
+    width: 121px;
+    height: 36px;
+    border-width: 0px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    color: black;
+}
+card-box > button:hover {
+    cursor: pointer;
+    background-color: #dbb2ff;
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 .left-sidebar > * {
     display: flex;
@@ -48,13 +79,14 @@ card-box {
     border-width: 0px;
     border-radius: 20px;
     background-color: transparent;
-
+    font-size: 1rem;
     color: black;
 }
 .left-sidebar > * > button:hover {
-    background-color: #dbb2ff;
+    cursor: pointer;
+    background-color: #fff;
     color: black;
-    font-size: medium;
+    font-size: 1rem;
     font-weight: bold;
 }
 .left-sidebar > * > button:active {
