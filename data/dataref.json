@@ -1,7 +1,9 @@
 {
     "admin" : {
         "name" : "admin",
+        "uniqueID" : "1234567890123456",
         "passwd" : "202cb962ac59075b964b07152d234b70",
+        "email" : "gmail-gmailod@gmailod.com",
         "regisDate" : "2024-04-15"
     }
 }

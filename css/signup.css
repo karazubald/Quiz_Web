@@ -1,0 +1,17 @@
+/* set correct box model */
+* {
+    box-sizing:border-box;
+}
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+single-box {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+single-box > * {
+    width:100%;
+    padding:calc(8px + 1.5625vw);
+}

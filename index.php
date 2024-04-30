@@ -4,11 +4,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', true);
 require 'require/functions.php';
 session_start();
-
+// Set session username as 'Anonymous' if not logged in.
 if(!isset($_SESSION["usrname"])){
     $_SESSION["usrname"] = "Anonymous";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
