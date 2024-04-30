@@ -3,10 +3,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 require 'require/functions.php';
+session_start();
 
-if(isset($_POST["submit"])){
-    // TODO: Add check user mechanism
+if(!isset($_SESSION["usrname"])){
+    $_SESSION["usrname"] = "Anonymous";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +21,9 @@ if(isset($_POST["submit"])){
 </head>
 <body>
     <holy-grail-flexbox>
-        <header class="header">Welcome to Kaz Website</header>
+        <header class="header">
+            Welcome to Kaz Website.
+        </header>
 
         <main class="main-content">
             <card-box>
@@ -30,18 +34,16 @@ if(isset($_POST["submit"])){
 
         <section class="left-sidebar">
             <greet-user>
-                Greetings!
+                Greetings, <?= $_SESSION["usrname"] ?>!
             </greet-user>
 
             <div>
-                <form action="index.php" method="POST">
-                    <button class="login-btn" type="submit">
-                        Log In
-                    </button>
-                </form>
+                <button class="login-btn" type="button" onclick='window.location = "require/login.php"'>
+                    <?php echo setLogButtonText($_SESSION["usrname"]) ?>
+                </button>
             </div>
             <div>
-                <button class="quiz-btn" type="button">
+                <button class="quiz-btn" type="button" onclick='window.location = "require/quiz.php"'>
                     Test_QUIZ
                 </button>
             </div>

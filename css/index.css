@@ -18,13 +18,20 @@ holy-grail-flexbox > * {
 }
 
 /* background colors */
-holy-grail-flexbox > .header {background:#f97171}
+holy-grail-flexbox > .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#f97171;
+}
 holy-grail-flexbox > .main-content {background:#fff}
 holy-grail-flexbox > .left-sidebar {background:#f5d55f}
 holy-grail-flexbox > .right-sidebar {background:#c5ed77}
 holy-grail-flexbox > .footer {background:#72c2f1}
 .main-content > * {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 card-box {
     align-items: center;

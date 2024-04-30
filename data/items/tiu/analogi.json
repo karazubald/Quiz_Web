@@ -1,0 +1,782 @@
+[
+	{
+		"number": 1,
+		"question": "MENDOBRAK - .... = UANG - ....",
+		"options": [
+			{
+				"option": "Pintu : Menabung",
+				"isTrue": 1
+			},
+			{
+				"option": "Meja : Meminjam",
+				"isTrue": 0
+			},
+			{
+				"option": "Paksa : Dompet",
+				"isTrue": 0
+			},
+			{
+				"option": "Pintu : Merampok",
+				"isTrue": 0
+			},
+			{
+				"option": "Menendang : Membeli",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 2,
+		"question": ".... - KABIN = .... - RUANGAN",
+		"options": [
+			{
+				"option": "Perahu : Gedung",
+				"isTrue": 0
+			},
+			{
+				"option": "Pilot : Supir",
+				"isTrue": 0
+			},
+			{
+				"option": "Pesawat Terbang : Rumah",
+				"isTrue": 1
+			},
+			{
+				"option": "Udara : Darat",
+				"isTrue": 0
+			},
+			{
+				"option": "Pintu : Bagasi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 3,
+		"question": ".... - PENJUALAN = IBADAH - ....",
+		"options": [
+			{
+				"option": "Pembelian : Dosa",
+				"isTrue": 0
+			},
+			{
+				"option": "Keuntungan : Pahala",
+				"isTrue": 1
+			},
+			{
+				"option": "Toko : Lapangan",
+				"isTrue": 0
+			},
+			{
+				"option": "Uang : Buku",
+				"isTrue": 0
+			},
+			{
+				"option": "Warung : Doa",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 4,
+		"question": ".... - LAPAR = LAMPU - ....",
+		"options": [
+			{
+				"option": "Kenyang : Api",
+				"isTrue": 0
+			},
+			{
+				"option": "Nasi : Pijar",
+				"isTrue": 0
+			},
+			{
+				"option": "Gemuk : Terang",
+				"isTrue": 0
+			},
+			{
+				"option": "Minum : Benderang",
+				"isTrue": 0
+			},
+			{
+				"option": "Makan : Gelap",
+				"isTrue": 1
+			}
+		]
+	},
+	{
+		"number": 5,
+		"question": ".... - ZEBRA = ANTISEPTIK - ....",
+		"options": [
+			{
+				"option": "Kuman : Penyakit",
+				"isTrue": 0
+			},
+			{
+				"option": "Kuda : Hama",
+				"isTrue": 1
+			},
+			{
+				"option": "Harimau : Obat",
+				"isTrue": 0
+			},
+			{
+				"option": "Tikus : Kotor",
+				"isTrue": 0
+			},
+			{
+				"option": "Singa : Oksigen",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 6,
+		"question": "LIHAT : CARI = SENTUH : ....",
+		"options": [
+			{
+				"option": "Rasa",
+				"isTrue": 0
+			},
+			{
+				"option": "Saraf",
+				"isTrue": 0
+			},
+			{
+				"option": "Tangan",
+				"isTrue": 0
+			},
+			{
+				"option": "Singgung",
+				"isTrue": 0
+			},
+			{
+				"option": "Raba",
+				"isTrue": 1
+			}
+		]
+	},
+	{
+		"number": 7,
+		"question": "AIR : POMPA = DARAH : ....",
+		"options": [
+			{
+				"option": "Arteri",
+				"isTrue": 0
+			},
+			{
+				"option": "Vena",
+				"isTrue": 0
+			},
+			{
+				"option": "Jantung",
+				"isTrue": 1
+			},
+			{
+				"option": "Arus",
+				"isTrue": 0
+			},
+			{
+				"option": "Paru-paru",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 8,
+		"question": "FISIOLOGI : TUMBUHAN",
+		"options": [
+			{
+				"option": "Patologi : Hama",
+				"isTrue": 1
+			},
+			{
+				"option": "Teologi : Khotbah",
+				"isTrue": 0
+			},
+			{
+				"option": "Manajemen : Perusahaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Onkologi : Ilmu",
+				"isTrue": 0
+			},
+			{
+				"option": "Racun : Madu",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 9,
+		"question": "UROLOGI : ALAT KELAMIN",
+		"options": [
+			{
+				"option": "Botani : Tumbuhan",
+				"isTrue": 1
+			},
+			{
+				"option": "Sosiologi : Desa",
+				"isTrue": 0
+			},
+			{
+				"option": "Farmasi : Obat",
+				"isTrue": 0
+			},
+			{
+				"option": "Keuangan : Perusahaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sosiologi : Hukum",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 10,
+		"question": "SUTRADARA : FILM",
+		"options": [
+			{
+				"option": "Komponis : Simponi",
+				"isTrue": 0
+			},
+			{
+				"option": "Aktor : Panggung",
+				"isTrue": 0
+			},
+			{
+				"option": "Konduktor : Orkestra",
+				"isTrue": 0
+			},
+			{
+				"option": "Lagu : Penyanyi",
+				"isTrue": 1
+			},
+			{
+				"option": "Baut : Obeng",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 11,
+		"question": "SAPI : RUMPUT",
+		"options": [
+			{
+				"option": "Lembu : Susu",
+				"isTrue": 0
+			},
+			{
+				"option": "Kapal Laut : Baling-baling",
+				"isTrue": 0
+			},
+			{
+				"option": "Penyakit : Bakteri",
+				"isTrue": 0
+			},
+			{
+				"option": "Motor : Bensin",
+				"isTrue": 1
+			},
+			{
+				"option": "Herbivora : Hewan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 12,
+		"question": "BULAT : LINGKARAN",
+		"options": [
+			{
+				"option": "Asah : Kapak",
+				"isTrue": 0
+			},
+			{
+				"option": "Mulut : Rata",
+				"isTrue": 0
+			},
+			{
+				"option": "Bola : Jari-jari",
+				"isTrue": 1
+			},
+			{
+				"option": "Persegi : Garis",
+				"isTrue": 0
+			},
+			{
+				"option": "Segi empat : Segitiga",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 13,
+		"question": "FISIOLOGI : ILMU",
+		"options": [
+			{
+				"option": "Perpustakaan : Buku",
+				"isTrue": 0
+			},
+			{
+				"option": "Astrologi : Galaksi",
+				"isTrue": 0
+			},
+			{
+				"option": "Bakau : Pohon",
+				"isTrue": 1
+			},
+			{
+				"option": "Teori : Fakta",
+				"isTrue": 0
+			},
+			{
+				"option": "Ikan : Pisces",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 14,
+		"question": "DANA : PENGGELAPAN",
+		"options": [
+			{
+				"option": "Uang : Bank",
+				"isTrue": 0
+			},
+			{
+				"option": "Hak Cipta : Penjiplakan",
+				"isTrue": 1
+			},
+			{
+				"option": "Dana : Perbankan",
+				"isTrue": 0
+			},
+			{
+				"option": "Cek : Penolakan",
+				"isTrue": 0
+			},
+			{
+				"option": "Karya : Kreatif",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 15,
+		"question": "AKTOR : PANGGUNG",
+		"options": [
+			{
+				"option": "Dosen : Perpustakaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Satpam : Pos keamanan",
+				"isTrue": 1
+			},
+			{
+				"option": "Lapangan : Bola",
+				"isTrue": 0
+			},
+			{
+				"option": "Konduktor : Musik",
+				"isTrue": 0
+			},
+			{
+				"option": "Seniman : Artis",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 16,
+		"question": ".... - DERAJAT = .... - KILOGRAM",
+		"options": [
+			{
+				"option": "Temperatur : Berat",
+				"isTrue": 1
+			},
+			{
+				"option": "Tenis : Servis",
+				"isTrue": 0
+			},
+			{
+				"option": "Massa : Usaha",
+				"isTrue": 0
+			},
+			{
+				"option": "Cahaya : Berat",
+				"isTrue": 0
+			},
+			{
+				"option": "Kelvin : Ohm",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 17,
+		"question": ".... - TOKO = BANK - ....",
+		"options": [
+			{
+				"option": "Tabungan : Deposito",
+				"isTrue": 0
+			},
+			{
+				"option": "Pinjaman : Nasabah",
+				"isTrue": 0
+			},
+			{
+				"option": "Museum : Artis",
+				"isTrue": 0
+			},
+			{
+				"option": "Pelayan : Teller",
+				"isTrue": 1
+			},
+			{
+				"option": "Karyawan : Mall",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 18,
+		"question": "GERGAJI : KAYU",
+		"options": [
+			{
+				"option": "Sendok : Makan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sepatu : Kaki",
+				"isTrue": 0
+			},
+			{
+				"option": "Gunting : Kertas",
+				"isTrue": 1
+			},
+			{
+				"option": "Pensil : Penghapus",
+				"isTrue": 0
+			},
+			{
+				"option": "Baju : Badan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 19,
+		"question": "RAJA : TAKHTA = HAKIM : ....",
+		"options": [
+			{
+				"option": "Pengacara",
+				"isTrue": 0
+			},
+			{
+				"option": "Mahkamah",
+				"isTrue": 1
+			},
+			{
+				"option": "Terdakwa",
+				"isTrue": 0
+			},
+			{
+				"option": "Pemeriksaan Pengadilan",
+				"isTrue": 0
+			},
+			{
+				"option": "Konstitusi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 20,
+		"question": "BOTAK : RAMBUT",
+		"options": [
+			{
+				"option": "Gundul : Hutan",
+				"isTrue": 0
+			},
+			{
+				"option": "Uban : Rambut",
+				"isTrue": 0
+			},
+			{
+				"option": "Bugil : Pakaian",
+				"isTrue": 1
+			},
+			{
+				"option": "Mogok : Mobil",
+				"isTrue": 0
+			},
+			{
+				"option": "Sari : Pati",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 21,
+		"question": ".... - SISWA = DOSEN - ....",
+		"options": [
+			{
+				"option": "Guru : Perguruan Tinggi",
+				"isTrue": 0
+			},
+			{
+				"option": "Guru : Kuliah",
+				"isTrue": 0
+			},
+			{
+				"option": "Mahasiswa : Guru",
+				"isTrue": 0
+			},
+			{
+				"option": "Belajar : Pengajar",
+				"isTrue": 1
+			},
+			{
+				"option": "SMA : Mahasiswa",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 22,
+		"question": ".... - TULANG = GEDUNG - ....",
+		"options": [
+			{
+				"option": "Belulang : Ber-AC",
+				"isTrue": 0
+			},
+			{
+				"option": "Tinggal : Bertingkat",
+				"isTrue": 0
+			},
+			{
+				"option": "Tua : Kota",
+				"isTrue": 0
+			},
+			{
+				"option": "Tubuh : Rangka",
+				"isTrue": 1
+			},
+			{
+				"option": "Kurus : Kokoh",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 23,
+		"question": ".... - KAPAL = PESAWAT - ....",
+		"options": [
+			{
+				"option": "Angkatan laut : Angkatan darat",
+				"isTrue": 0
+			},
+			{
+				"option": "Pelaut : Penerbang",
+				"isTrue": 1
+			},
+			{
+				"option": "Prajurit : Pilot",
+				"isTrue": 0
+			},
+			{
+				"option": "Ikan : Polusi",
+				"isTrue": 0
+			},
+			{
+				"option": "Sungai : Oksigen",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 24,
+		"question": "BAJU : PAKAIAN = BERAS : ....",
+		"options": [
+			{
+				"option": "Padi",
+				"isTrue": 0
+			},
+			{
+				"option": "Pangan",
+				"isTrue": 1
+			},
+			{
+				"option": "Sawah",
+				"isTrue": 0
+			},
+			{
+				"option": "Petani",
+				"isTrue": 0
+			},
+			{
+				"option": "Desa",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 25,
+		"question": "BULU HIDUNG : UDARA = ALIS : ....",
+		"options": [
+			{
+				"option": "Hitam",
+				"isTrue": 0
+			},
+			{
+				"option": "Keringat",
+				"isTrue": 1
+			},
+			{
+				"option": "Mata",
+				"isTrue": 0
+			},
+			{
+				"option": "Kotor",
+				"isTrue": 0
+			},
+			{
+				"option": "Debu",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 26,
+		"question": "GIGI TARING : KARNIVORA",
+		"options": [
+			{
+				"option": "Cakar : Binatang Buas",
+				"isTrue": 1
+			},
+			{
+				"option": "Tajam : Mata",
+				"isTrue": 0
+			},
+			{
+				"option": "Sayap : Terbang",
+				"isTrue": 0
+			},
+			{
+				"option": "Ekor : Binatang",
+				"isTrue": 0
+			},
+			{
+				"option": "Paruh : Makan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 27,
+		"question": "CACING : ULAR",
+		"options": [
+			{
+				"option": "Singa : Harimau",
+				"isTrue": 0
+			},
+			{
+				"option": "Kambing : Sapi",
+				"isTrue": 0
+			},
+			{
+				"option": "Biawak : Komodo",
+				"isTrue": 0
+			},
+			{
+				"option": "Hiu : Paus",
+				"isTrue": 1
+			},
+			{
+				"option": "Merpati : Elang",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 28,
+		"question": "LAUT : SAMUDRA",
+		"options": [
+			{
+				"option": "Sungai : Laut",
+				"isTrue": 0
+			},
+			{
+				"option": "Danau : Air",
+				"isTrue": 0
+			},
+			{
+				"option": "Bukit : Lembah",
+				"isTrue": 0
+			},
+			{
+				"option": "Pulau : Benua",
+				"isTrue": 1
+			},
+			{
+				"option": "Delta : Laut",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 29,
+		"question": "ORANG BODOH : ILMU",
+		"options": [
+			{
+				"option": "Orang miskin : Derma",
+				"isTrue": 0
+			},
+			{
+				"option": "Pengemis : Lapar",
+				"isTrue": 0
+			},
+			{
+				"option": "Pengangguran : Kerja",
+				"isTrue": 1
+			},
+			{
+				"option": "Karyawan : Gaji",
+				"isTrue": 0
+			},
+			{
+				"option": "Orang kaya : Harta",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 30,
+		"question": "GURU : SEKOLAH",
+		"options": [
+			{
+				"option": "Penebang pohon : Pabrik",
+				"isTrue": 0
+			},
+			{
+				"option": "Musisi : Piano",
+				"isTrue": 0
+			},
+			{
+				"option": "Pengacara : Panggung",
+				"isTrue": 0
+			},
+			{
+				"option": "Penyanyi : Suara",
+				"isTrue": 0
+			},
+			{
+				"option": "Petani : Ladang",
+				"isTrue": 1
+			}
+		]
+	}
+]

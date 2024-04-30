@@ -1,0 +1,1302 @@
+[
+	{
+		"number": 1,
+		"question": "MUFAKAT",
+		"options": [
+			{
+				"option": "Rapat",
+				"isTrue": 0
+			},
+			{
+				"option": "Musyawarah",
+				"isTrue": 0
+			},
+			{
+				"option": "Demokratis",
+				"isTrue": 0
+			},
+			{
+				"option": "Abstain",
+				"isTrue": 0
+			},
+			{
+				"option": "Setuju",
+				"isTrue": 1
+			}
+		]
+	},
+	{
+		"number": 2,
+		"question": "MAYA",
+		"options": [
+			{
+				"option": "Alam",
+				"isTrue": 0
+			},
+			{
+				"option": "Khayalan",
+				"isTrue": 1
+			},
+			{
+				"option": "Nyata",
+				"isTrue": 0
+			},
+			{
+				"option": "Teknologi",
+				"isTrue": 0
+			},
+			{
+				"option": "Rabun",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 3,
+		"question": "MOTIF",
+		"options": [
+			{
+				"option": "Motivasi",
+				"isTrue": 0
+			},
+			{
+				"option": "Pola",
+				"isTrue": 1
+			},
+			{
+				"option": "Semangat",
+				"isTrue": 0
+			},
+			{
+				"option": "Gambar",
+				"isTrue": 0
+			},
+			{
+				"option": "Wujud",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 4,
+		"question": "FLUKTUASI",
+		"options": [
+			{
+				"option": "Kadar",
+				"isTrue": 0
+			},
+			{
+				"option": "Perubahan",
+				"isTrue": 0
+			},
+			{
+				"option": "Gejolak",
+				"isTrue": 1
+			},
+			{
+				"option": "Perhitungan",
+				"isTrue": 0
+			},
+			{
+				"option": "Grafik",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 5,
+		"question": "INTERPRETASI",
+		"options": [
+			{
+				"option": "Dugaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Tafsir",
+				"isTrue": 1
+			},
+			{
+				"option": "Rekaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Perkataan",
+				"isTrue": 0
+			},
+			{
+				"option": "Perkiraan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 6,
+		"question": "ANALOGI",
+		"options": [
+			{
+				"option": "Mulut",
+				"isTrue": 0
+			},
+			{
+				"option": "Persamaan",
+				"isTrue": 1
+			},
+			{
+				"option": "Ilmu",
+				"isTrue": 0
+			},
+			{
+				"option": "Perbedaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sinonim",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 7,
+		"question": "REALITAS",
+		"options": [
+			{
+				"option": "Maya",
+				"isTrue": 0
+			},
+			{
+				"option": "Abstrak",
+				"isTrue": 0
+			},
+			{
+				"option": "Fokus",
+				"isTrue": 0
+			},
+			{
+				"option": "Kenyataan",
+				"isTrue": 1
+			},
+			{
+				"option": "Bukti",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 8,
+		"question": "KONVENSI",
+		"options": [
+			{
+				"option": "Kesepakatan",
+				"isTrue": 1
+			},
+			{
+				"option": "Perdamaian",
+				"isTrue": 0
+			},
+			{
+				"option": "Negosiasi",
+				"isTrue": 0
+			},
+			{
+				"option": "Harapan",
+				"isTrue": 0
+			},
+			{
+				"option": "Undangan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 9,
+		"question": "INSTITUSI",
+		"options": [
+			{
+				"option": "Sosial",
+				"isTrue": 0
+			},
+			{
+				"option": "Lembaga",
+				"isTrue": 1
+			},
+			{
+				"option": "Intuisi",
+				"isTrue": 0
+			},
+			{
+				"option": "Budaya",
+				"isTrue": 0
+			},
+			{
+				"option": "Hasrat",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 10,
+		"question": "ELASTIS",
+		"options": [
+			{
+				"option": "Kenyal",
+				"isTrue": 0
+			},
+			{
+				"option": "Kaku",
+				"isTrue": 0
+			},
+			{
+				"option": "Solid",
+				"isTrue": 0
+			},
+			{
+				"option": "Konkrit",
+				"isTrue": 0
+			},
+			{
+				"option": "Fleksibel",
+				"isTrue": 1
+			}
+		]
+	},
+	{
+		"number": 11,
+		"question": "MUKADIMAH",
+		"options": [
+			{
+				"option": "Pembukaan",
+				"isTrue": 1
+			},
+			{
+				"option": "Preambul",
+				"isTrue": 0
+			},
+			{
+				"option": "Konstitusi",
+				"isTrue": 0
+			},
+			{
+				"option": "Undang-undang",
+				"isTrue": 0
+			},
+			{
+				"option": "Peraturan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 12,
+		"question": "GRATIFIKASI",
+		"options": [
+			{
+				"option": "Bantuan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sumbangan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sogok",
+				"isTrue": 1
+			},
+			{
+				"option": "Imbalan",
+				"isTrue": 0
+			},
+			{
+				"option": "Undangan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 13,
+		"question": "DESIBEL",
+		"options": [
+			{
+				"option": "Intensitas",
+				"isTrue": 0
+			},
+			{
+				"option": "Identitas",
+				"isTrue": 0
+			},
+			{
+				"option": "Suara",
+				"isTrue": 0
+			},
+			{
+				"option": "Satuan Ukuran",
+				"isTrue": 1
+			},
+			{
+				"option": "Getaran",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 14,
+		"question": "DESERSI",
+		"options": [
+			{
+				"option": "Resesi",
+				"isTrue": 0
+			},
+			{
+				"option": "Melarikan Diri",
+				"isTrue": 1
+			},
+			{
+				"option": "Berani",
+				"isTrue": 0
+			},
+			{
+				"option": "Sopan",
+				"isTrue": 0
+			},
+			{
+				"option": "Wajib Lapor",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 15,
+		"question": "BULEVAR",
+		"options": [
+			{
+				"option": "Adimarga",
+				"isTrue": 1
+			},
+			{
+				"option": "Jalan",
+				"isTrue": 0
+			},
+			{
+				"option": "Gang",
+				"isTrue": 0
+			},
+			{
+				"option": "Reguler",
+				"isTrue": 0
+			},
+			{
+				"option": "Ramai",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 16,
+		"question": "ADAT",
+		"options": [
+			{
+				"option": "Hukum",
+				"isTrue": 0
+			},
+			{
+				"option": "Tata",
+				"isTrue": 0
+			},
+			{
+				"option": "Kebiasaan",
+				"isTrue": 1
+			},
+			{
+				"option": "Akal",
+				"isTrue": 0
+			},
+			{
+				"option": "Sosial",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 17,
+		"question": "PREMI",
+		"options": [
+			{
+				"option": "Komisi",
+				"isTrue": 1
+			},
+			{
+				"option": "Iuran",
+				"isTrue": 0
+			},
+			{
+				"option": "Obligasi",
+				"isTrue": 0
+			},
+			{
+				"option": "Asuransi",
+				"isTrue": 0
+			},
+			{
+				"option": "Emisi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 18,
+		"question": "STAGNAN",
+		"options": [
+			{
+				"option": "Lancar",
+				"isTrue": 0
+			},
+			{
+				"option": "Mulus",
+				"isTrue": 0
+			},
+			{
+				"option": "Tersendat",
+				"isTrue": 1
+			},
+			{
+				"option": "Terbagi",
+				"isTrue": 0
+			},
+			{
+				"option": "Sempit",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 19,
+		"question": "DIKTE",
+		"options": [
+			{
+				"option": "Paksa",
+				"isTrue": 0
+			},
+			{
+				"option": "Diktator",
+				"isTrue": 0
+			},
+			{
+				"option": "Arahkan",
+				"isTrue": 0
+			},
+			{
+				"option": "Imla",
+				"isTrue": 1
+			},
+			{
+				"option": "Perintah",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 20,
+		"question": "SPIRAL",
+		"options": [
+			{
+				"option": "Bulatan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sulur Batang",
+				"isTrue": 1
+			},
+			{
+				"option": "Kawat",
+				"isTrue": 0
+			},
+			{
+				"option": "Lurus",
+				"isTrue": 0
+			},
+			{
+				"option": "Melengkung",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 21,
+		"question": "SKEPTIS",
+		"options": [
+			{
+				"option": "Yakin",
+				"isTrue": 0
+			},
+			{
+				"option": "Benar",
+				"isTrue": 0
+			},
+			{
+				"option": "Ragu-ragu",
+				"isTrue": 1
+			},
+			{
+				"option": "Percaya",
+				"isTrue": 0
+			},
+			{
+				"option": "Motivasi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 22,
+		"question": "SISTEMATIK",
+		"options": [
+			{
+				"option": "Penggolongan",
+				"isTrue": 0
+			},
+			{
+				"option": "Susunan",
+				"isTrue": 1
+			},
+			{
+				"option": "Serentak",
+				"isTrue": 0
+			},
+			{
+				"option": "Optimistik",
+				"isTrue": 0
+			},
+			{
+				"option": "Tematik",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 23,
+		"question": "SINYAL",
+		"options": [
+			{
+				"option": "Bunyi",
+				"isTrue": 0
+			},
+			{
+				"option": "Tanda",
+				"isTrue": 1
+			},
+			{
+				"option": "Buku",
+				"isTrue": 0
+			},
+			{
+				"option": "Arah",
+				"isTrue": 0
+			},
+			{
+				"option": "Sirene",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 24,
+		"question": "ISTAL",
+		"options": [
+			{
+				"option": "Istana",
+				"isTrue": 0
+			},
+			{
+				"option": "Kandang kuda",
+				"isTrue": 1
+			},
+			{
+				"option": "Sangkar",
+				"isTrue": 0
+			},
+			{
+				"option": "Lapangan",
+				"isTrue": 0
+			},
+			{
+				"option": "Kanal",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 25,
+		"question": "ASA",
+		"options": [
+			{
+				"option": "Angan-angan",
+				"isTrue": 0
+			},
+			{
+				"option": "Harapan",
+				"isTrue": 1
+			},
+			{
+				"option": "Keputusan",
+				"isTrue": 0
+			},
+			{
+				"option": "Damai",
+				"isTrue": 0
+			},
+			{
+				"option": "Mimpi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 26,
+		"question": "MADAT",
+		"options": [
+			{
+				"option": "Vitamin",
+				"isTrue": 0
+			},
+			{
+				"option": "Obat",
+				"isTrue": 0
+			},
+			{
+				"option": "Candu",
+				"isTrue": 1
+			},
+			{
+				"option": "Cerutu",
+				"isTrue": 0
+			},
+			{
+				"option": "Tembakau",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 27,
+		"question": "ASUMSI",
+		"options": [
+			{
+				"option": "Dugaan",
+				"isTrue": 1
+			},
+			{
+				"option": "Perhitungan",
+				"isTrue": 0
+			},
+			{
+				"option": "Cadangan",
+				"isTrue": 0
+			},
+			{
+				"option": "Ramal",
+				"isTrue": 0
+			},
+			{
+				"option": "Estimasi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 28,
+		"question": "STRATA",
+		"options": [
+			{
+				"option": "Proses",
+				"isTrue": 0
+			},
+			{
+				"option": "Cara",
+				"isTrue": 0
+			},
+			{
+				"option": "Citra",
+				"isTrue": 0
+			},
+			{
+				"option": "Lapisan",
+				"isTrue": 1
+			},
+			{
+				"option": "Brahmana",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 29,
+		"question": "PIALANG",
+		"options": [
+			{
+				"option": "Pembeli",
+				"isTrue": 0
+			},
+			{
+				"option": "Saham",
+				"isTrue": 0
+			},
+			{
+				"option": "Penjual",
+				"isTrue": 0
+			},
+			{
+				"option": "Makelar",
+				"isTrue": 1
+			},
+			{
+				"option": "Emiten",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 30,
+		"question": "STIMULUS",
+		"options": [
+			{
+				"option": "Perangsang",
+				"isTrue": 1
+			},
+			{
+				"option": "Tarikan",
+				"isTrue": 0
+			},
+			{
+				"option": "Pengabaian",
+				"isTrue": 0
+			},
+			{
+				"option": "Permintaan",
+				"isTrue": 0
+			},
+			{
+				"option": "Kebijakan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 31,
+		"question": "MOMENTUM",
+		"options": [
+			{
+				"option": "Tekanan",
+				"isTrue": 0
+			},
+			{
+				"option": "Kesempatan",
+				"isTrue": 1
+			},
+			{
+				"option": "Dorongan",
+				"isTrue": 0
+			},
+			{
+				"option": "Adendum",
+				"isTrue": 0
+			},
+			{
+				"option": "Tumbukan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 32,
+		"question": "ALOKASI",
+		"options": [
+			{
+				"option": "Penyebaran",
+				"isTrue": 0
+			},
+			{
+				"option": "Pemindahan",
+				"isTrue": 0
+			},
+			{
+				"option": "Pembagian",
+				"isTrue": 1
+			},
+			{
+				"option": "Anggaran",
+				"isTrue": 0
+			},
+			{
+				"option": "Aneksi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 33,
+		"question": "Gabungan",
+		"options": [
+			{
+				"option": "Kelompok",
+				"isTrue": 0
+			},
+			{
+				"option": "Fusi",
+				"isTrue": 1
+			},
+			{
+				"option": "Perserikatan",
+				"isTrue": 0
+			},
+			{
+				"option": "Berkumpul",
+				"isTrue": 0
+			},
+			{
+				"option": "Partai",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 34,
+		"question": "DAUR",
+		"options": [
+			{
+				"option": "Ulang",
+				"isTrue": 0
+			},
+			{
+				"option": "Siklus",
+				"isTrue": 1
+			},
+			{
+				"option": "Proses",
+				"isTrue": 0
+			},
+			{
+				"option": "Sampah",
+				"isTrue": 0
+			},
+			{
+				"option": "Olah",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 35,
+		"question": "INTERAKSI",
+		"options": [
+			{
+				"option": "Transaksi",
+				"isTrue": 0
+			},
+			{
+				"option": "Komunikasi",
+				"isTrue": 0
+			},
+			{
+				"option": "Hubungan",
+				"isTrue": 1
+			},
+			{
+				"option": "Sosial",
+				"isTrue": 0
+			},
+			{
+				"option": "Transaksi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 36,
+		"question": "PARTIKELIR",
+		"options": [
+			{
+				"option": "Tukang parkir",
+				"isTrue": 0
+			},
+			{
+				"option": "Partisan",
+				"isTrue": 0
+			},
+			{
+				"option": "Partisi",
+				"isTrue": 0
+			},
+			{
+				"option": "Swasta",
+				"isTrue": 1
+			},
+			{
+				"option": "Enterpreneur",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 37,
+		"question": "PANDEMI",
+		"options": [
+			{
+				"option": "Anatomi",
+				"isTrue": 0
+			},
+			{
+				"option": "Geografi",
+				"isTrue": 0
+			},
+			{
+				"option": "Wabah",
+				"isTrue": 1
+			},
+			{
+				"option": "Epidemik",
+				"isTrue": 0
+			},
+			{
+				"option": "Kesehatan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 38,
+		"question": "ENTAS",
+		"options": [
+			{
+				"option": "Masuk",
+				"isTrue": 0
+			},
+			{
+				"option": "Tinggi",
+				"isTrue": 0
+			},
+			{
+				"option": "Angkat",
+				"isTrue": 1
+			},
+			{
+				"option": "Tahan",
+				"isTrue": 0
+			},
+			{
+				"option": "Stagnan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 39,
+		"question": "EMITEN",
+		"options": [
+			{
+				"option": "Komitmen",
+				"isTrue": 0
+			},
+			{
+				"option": "Badan Usaha",
+				"isTrue": 1
+			},
+			{
+				"option": "Saham",
+				"isTrue": 0
+			},
+			{
+				"option": "Surat berharga",
+				"isTrue": 0
+			},
+			{
+				"option": "Pialang",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 40,
+		"question": "EMISI",
+		"options": [
+			{
+				"option": "Pancaran",
+				"isTrue": 1
+			},
+			{
+				"option": "Gas",
+				"isTrue": 0
+			},
+			{
+				"option": "Emiten",
+				"isTrue": 0
+			},
+			{
+				"option": "Buang",
+				"isTrue": 0
+			},
+			{
+				"option": "Komisi",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 41,
+		"question": "NATALITAS",
+		"options": [
+			{
+				"option": "Kematian",
+				"isTrue": 0
+			},
+			{
+				"option": "Migrasi",
+				"isTrue": 0
+			},
+			{
+				"option": "Kelahiran",
+				"isTrue": 1
+			},
+			{
+				"option": "Hari raya",
+				"isTrue": 0
+			},
+			{
+				"option": "Penduduk",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 42,
+		"question": "CANTIK",
+		"options": [
+			{
+				"option": "Rupa",
+				"isTrue": 0
+			},
+			{
+				"option": "Rapih",
+				"isTrue": 0
+			},
+			{
+				"option": "Elok",
+				"isTrue": 1
+			},
+			{
+				"option": "Teratur",
+				"isTrue": 0
+			},
+			{
+				"option": "Muka",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 43,
+		"question": "KOTOR",
+		"options": [
+			{
+				"option": "Anoda",
+				"isTrue": 0
+			},
+			{
+				"option": "Motor",
+				"isTrue": 0
+			},
+			{
+				"option": "Sampan",
+				"isTrue": 0
+			},
+			{
+				"option": "Tidak patut",
+				"isTrue": 1
+			},
+			{
+				"option": "Runyam",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 44,
+		"question": "GARASI",
+		"options": [
+			{
+				"option": "Tidak usah bayar",
+				"isTrue": 0
+			},
+			{
+				"option": "Tempat penyimpanan mobil",
+				"isTrue": 0
+			},
+			{
+				"option": "Pengampunan hukuman",
+				"isTrue": 0
+			},
+			{
+				"option": "Alat untuk memotong kayu",
+				"isTrue": 0
+			},
+			{
+				"option": "Gerenda",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 45,
+		"question": "KULMINASI",
+		"options": [
+			{
+				"option": "Tingkatan tertinggi",
+				"isTrue": 1
+			},
+			{
+				"option": "Tempat mendinginkan sesuatu",
+				"isTrue": 0
+			},
+			{
+				"option": "Keadaan emisi sekarang",
+				"isTrue": 0
+			},
+			{
+				"option": "Panas terik matahari",
+				"isTrue": 0
+			},
+			{
+				"option": "Optimum",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 46,
+		"question": "KONTRADIKSI",
+		"options": [
+			{
+				"option": "Penandatanganan kontrak",
+				"isTrue": 0
+			},
+			{
+				"option": "Pertentangan",
+				"isTrue": 1
+			},
+			{
+				"option": "Perjanjian",
+				"isTrue": 0
+			},
+			{
+				"option": "Perdebatan",
+				"isTrue": 0
+			},
+			{
+				"option": "Perselisihan",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 47,
+		"question": "KREASI",
+		"options": [
+			{
+				"option": "Kemampuan berpikir",
+				"isTrue": 0
+			},
+			{
+				"option": "Rencana",
+				"isTrue": 0
+			},
+			{
+				"option": "Inovasi",
+				"isTrue": 0
+			},
+			{
+				"option": "Ciptaan",
+				"isTrue": 1
+			},
+			{
+				"option": "Khayal",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 48,
+		"question": "SAPTA",
+		"options": [
+			{
+				"option": "Marga",
+				"isTrue": 0
+			},
+			{
+				"option": "Sumpah",
+				"isTrue": 0
+			},
+			{
+				"option": "Prasetya",
+				"isTrue": 0
+			},
+			{
+				"option": "Tujuh",
+				"isTrue": 1
+			},
+			{
+				"option": "Enam",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 49,
+		"question": "HOMOGEN",
+		"options": [
+			{
+				"option": "Seimbang",
+				"isTrue": 0
+			},
+			{
+				"option": "Harmonis",
+				"isTrue": 0
+			},
+			{
+				"option": "Sepadan",
+				"isTrue": 0
+			},
+			{
+				"option": "Sejenis",
+				"isTrue": 1
+			},
+			{
+				"option": "Senyawa",
+				"isTrue": 0
+			}
+		]
+	},
+	{
+		"number": 50,
+		"question": "TIMPANG",
+		"options": [
+			{
+				"option": "Kesal",
+				"isTrue": 0
+			},
+			{
+				"option": "Ganjil",
+				"isTrue": 0
+			},
+			{
+				"option": "Aneh",
+				"isTrue": 0
+			},
+			{
+				"option": "Senjang",
+				"isTrue": 0
+			},
+			{
+				"option": "Fluktuatif",
+				"isTrue": 0
+			}
+		]
+	}
+]

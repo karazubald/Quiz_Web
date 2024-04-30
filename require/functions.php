@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', true);
-require 'tiu/sinonim.php';
-// More require if necessary
+
+$items = readDataRef("../data/items/tiu/sinonim.json");
 
 /**
  * Obtain data from filename as an array.
@@ -11,7 +11,8 @@ require 'tiu/sinonim.php';
  * @return array an associative array.
  */
 function readDataRef($filename){
-    $fileRef = file_get_contents($filename);
+    $directoryRef = __DIR__;
+    $fileRef = file_get_contents($directoryRef.'/'.$filename);
     $jsonData = json_decode($fileRef, true);
     return $jsonData;
 }
@@ -50,5 +51,17 @@ function generateRandomString($length = 6) {
         $randomString .= $characters[random_int(0, $charactersLength - 1)];
     }
     return $randomString;
+}
+
+function setLogButtonText($session_usrname){
+    $text = "Session Unset";
+    if($session_usrname === "Anonymous") {
+        $text = "Log In";
+    }
+    if($session_usrname !== "Anonymous"){
+        session_unset();
+        $text = "Log Out";
+    }
+    return $text;
 }
 ?>
