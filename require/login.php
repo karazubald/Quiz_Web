@@ -28,11 +28,15 @@ if( isset($_POST["submit"]) ) {
 </head>
 <body>
     <single-box>
+        <div id="descriptive-text">
+            Halaman Masuk
+        </div>
         <form action="" method="POST">
             <input type="text" name="usrname" id="usrname" placeholder="Your Username">
             <input type="text" name="passwd" id="passwd" placeholder="Your Password">
             <button type="submit" name="submit" value="login">Login</button>
         </form>
+        <button type="button" onclick='window.location = "signup.php"'>Saya pengguna baru, ingin mendaftarkan diri!</button>
     </single-box>
 </body>
 </html>

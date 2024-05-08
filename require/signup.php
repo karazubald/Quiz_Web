@@ -8,7 +8,6 @@ if (isset($_POST["submit"])) {
     $jsonRef = "../data/dataref.json"; // json reference
     $user = $_POST["aName"];
     $uniqueID = md5($_POST["nik"], false);
-    $isExist = checkDataRef($jsonRef, $user);
     $passwd = md5(trim($_POST["passwd"]), false);
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $newUserArray = [
@@ -21,17 +20,16 @@ if (isset($_POST["submit"])) {
         ],
     ];
 
-    if ($isExist) {
-        $isDuplicateID = checkDataRef($jsonRef, $uniqueID);
-        if ($isDuplicateID) {
-            echo '<script>alert("Nama anda sudah terdaftar sebagai user. Silakan menuju halaman login!")</script>';
-            exit();
-        }
+    $isRegisteredUser = checkDataRef($jsonRef, $uniqueID);
+    if ($isRegisteredUser) {
+        echo '<script>console.log("Nama anda sudah terdaftar sebagai user. Silakan menuju halaman login!")</script>';
+        exit();
+    }
+    if (!$isRegisteredUser) {
+        echo '<script>console.log("Nama anda belum terdaftar sebagai user!")</script>';
         writeDataRef($newUserArray,$jsonRef);
     }
-    if (!$isExist) {
-        writeDataRef($newUserArray,$jsonRef);
-    }
+
 }
 ?>
 <!DOCTYPE html>
@@ -44,13 +42,17 @@ if (isset($_POST["submit"])) {
 </head>
 <body>
     <single-box>
+        <div id="descriptive-text">
+            Halaman Pendaftaran Pengguna
+        </div>
         <form action="" method="POST">
             <input type="text" name="aName" id="aName" placeholder="Nama Anda">
-            <input type="text" name="nik" id="nik" placeholder="Nomor KTP">
+            <input type="text" name="nik" id="nik" placeholder="16 digit nomor KTP" minlength="16" maxlength="16">
             <input type="text" name="email" id="email" placeholder="Email">
-            <input type="text" name="passwd" id="passwd" placeholder="Kata Sandi">
+            <input type="text" name="passwd" id="passwd" placeholder="Kata Sandi" minlength="3">
             <button type="submit" name="submit" value="login">Sign Up</button>
         </form>
+        <button type="button" onclick='window.location = "login.php"'>Kembali ke Halaman Masuk</button>
     </single-box>
 </body>
 </html>
