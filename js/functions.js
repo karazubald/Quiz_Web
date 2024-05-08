@@ -6,12 +6,14 @@ let userResponseJSON = new Object();
  * @param {Object} serverObject an object from server.
  */
 function initItemObject(serverObject){
-    for (let index = 0; index < Object.keys(serverObject).length; index++) {
+    itemQuantity = Object.keys(serverObject).length;
+    for (let index = 0; index < itemQuantity; index++) {
         itemObject[index] = {
             question: serverObject[index].question,
             options: new Object()
         }
-        for (let optionIndex = 0; optionIndex < Object.keys(serverObject[index].options).length; optionIndex++) {
+        optionsQuantity = Object.keys(serverObject[index].options).length;
+        for (let optionIndex = 0; optionIndex < optionsQuantity; optionIndex++) {
             itemObject[index].options[optionIndex] = serverObject[index].options[optionIndex].option;
         }
     }
@@ -133,6 +135,9 @@ function generateOptions(questionIndex){
     document.getElementById(idRef).append(fragment);
 }
 
+/**
+ * Send user response to result.php.
+ */
 function sendUserResponse(){
     let targetPHP = "result.php";
     let responseData = JSON.stringify(userResponseJSON);
@@ -149,4 +154,22 @@ function sendUserResponse(){
     })
     .then(data => console.log(data))
     .catch(error => console.log(error));
+}
+
+/**
+ * Generate a countdown timer and displayed the remaining seconds to timerText.
+ * @param {Number} seconds The number of seconds, starting from 0.
+ * @param {Text} timerText A html element's text.
+ */
+function timer(seconds, timerText) {
+    let counter = seconds;
+    let txt = timerText;
+    const interval = setInterval(() => {
+        counter--;
+        txt = counter;
+
+        if(counter < 0){
+            clearInterval(interval);
+        }
+    },1000);
 }
