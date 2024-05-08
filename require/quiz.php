@@ -15,10 +15,13 @@
     <?php
         echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
     ?>
-    <script>initUserResponse()</script>
-    <timer-area>
-    </timer-area>
     <quiz-area>
+        <div id="timer-area">
+            Timer is set in here!
+        </div>
+        <script>
+            timer(6,document.getElementById("timer-area"));
+        </script>
         <questions-idx id="question-idx">
             <script>
                 generateQuestionIndex("questionIndexGroup");

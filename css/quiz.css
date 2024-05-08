@@ -15,6 +15,10 @@ quiz-area > * {
     align-items: center;
     justify-content: center;
 }
+quiz-area > #timer-area{
+    display: flex;
+    align-self: center;
+}
 questions-idx {
     display: flex;
     flex-wrap: wrap;

@@ -17,7 +17,6 @@ function initItemObject(serverObject){
             itemObject[index].options[optionIndex] = serverObject[index].options[optionIndex].option;
         }
     }
-    console.log(itemObject);
     initUserResponse();
 }
 
@@ -159,16 +158,16 @@ function sendUserResponse(){
 /**
  * Generate a countdown timer and displayed the remaining seconds to timerText.
  * @param {Number} seconds The number of seconds, starting from 0.
- * @param {Text} timerText A html element's text.
+ * @param {Element} timerElement A html element for displaying timer.
  */
-function timer(seconds, timerText) {
+function timer(seconds, timerElement) {
     let counter = seconds;
-    let txt = timerText;
+    timerElement.textContent = counter;
     const interval = setInterval(() => {
         counter--;
-        txt = counter;
+        timerElement.textContent = counter;
 
-        if(counter < 0){
+        if(counter === 0){
             clearInterval(interval);
         }
     },1000);
