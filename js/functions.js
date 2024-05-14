@@ -14,7 +14,7 @@ function initItemObject(serverObject){
         }
         optionsQuantity = Object.keys(serverObject[index].options).length;
         for (let optionIndex = 0; optionIndex < optionsQuantity; optionIndex++) {
-            itemObject[index].options[optionIndex] = serverObject[index].options[optionIndex].option;
+            itemObject[index].options[optionIndex] = serverObject[index].options[optionIndex];
         }
     }
     initUserResponse();
@@ -112,7 +112,7 @@ function generateOptions(questionIndex){
         radioInputElement.setAttribute("value", index);
         radioLabel.setAttribute("for", radioIdentity+correctedIndex);
         radioLabel.setAttribute("id", "optLabel-"+radioIdentity+correctedIndex);
-        radioLabel.textContent = itemObject[questionIndex].options[index];
+        radioLabel.textContent = itemObject[questionIndex].options[index].option;
 
         let divEl = document.createElement("div");
         radioInputElement.addEventListener("change", () => {

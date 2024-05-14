@@ -88,4 +88,34 @@ function setLogButtonText($session_usrname){
     }
     return $text;
 }
+
+/**
+ * Create an associative array containing variables for mathematical operation.
+ *
+ * @param integer $size The number of variable inside variable map. Must be between 3 to 26. If no argument passed, the defult value 3 will be used.
+ * @return array An asscoative array of with each variable value set to 0.
+ */ 
+function createVariableArray($size = 3){
+    if ($size < 3) $size = 3;
+    if ($size > 26) return "Error, must not exceed 26!";
+    $alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    $variableMap = array();
+    for ($i=0; $i < $size; $i++) {
+        $variableMap[$alphabets[$i]] = 0; 
+    }
+    return $variableMap;
+}
+/**
+ * Return the greatest common divisor of $a and $b.
+ *
+ * @param integer|float $a a number either integer or float.
+ * @param integer|float $b a number either integer of float.
+ * @return integer|float a number representing the greatest common divisor of $a and $b.
+ */
+function gcd($a, $b){
+    if ($b === 0){
+        return $a;
+    }
+    return gcd($b, $a % $b);
+}
 ?>
