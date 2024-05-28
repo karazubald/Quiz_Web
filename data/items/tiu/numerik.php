@@ -231,4 +231,114 @@ $itemArray[7] = [
         ["option" => number_format($mathVariable['n'])." : ".number_format($mathVariable['o']), "isTrue" => 0],
     ],
 ];
+
+$mathVariable['a'] = random_int(50,100);
+$mathVariable['b'] = random_int(10,50);
+$mathVariable['c'] = random_int(7,25);
+while (!isPrime($mathVariable['a'])){
+	$mathVariable['a'] = random_int(50,100);
+}
+while (!isPrime($mathVariable['b'])){
+	$mathVariable['b'] = random_int(10,50);
+	}
+while ($mathVariable['a'] === $mathVariable['b']){
+	while (!isPrime($mathVariable['a'])){
+	$mathVariable['a'] = random_int(50,100);
+	}
+	while (!isPrime($mathVariable['b'])){
+	$mathVariable['b'] = random_int(10,50);
+	}
+}
+while (!isPrime($mathVariable['c'])){
+	$mathVariable['c'] = random_int(7,25);
+}
+// correct answer
+$mathVariable['d'] = $mathVariable['a'] * $mathVariable['b'] / ($mathVariable['a'] - $mathVariable['c']) * 24;
+// distractor
+$mathVariable['e'] = $mathVariable['a'] * $mathVariable['b'] / ($mathVariable['a'] + $mathVariable['c']) * 24 + 1;
+$mathVariable['f'] = $mathVariable['a'] * $mathVariable['b'] / ($mathVariable['a'] - $mathVariable['c']);
+$mathVariable['g'] = $mathVariable['a'] * $mathVariable['b'] / ($mathVariable['a'] + $mathVariable['c']) * 24;
+$mathVariable['h'] = $mathVariable['a'] * $mathVariable['b'] / ($mathVariable['a'] - $mathVariable['c']) * 24 - 1;
+// question
+$itemArray[8] = [
+    "number" => 9,
+    "question" => "Sebanyak ".$mathVariable['a']." orang pekerja bangunan dapat menyelesaikan pekerjaan dalam waktu ".$mathVariable['b']." hari. Apabila ada ".$mathVariable['c']." orang yang tidak masuk kerja, maka mereka dapat menyelesaikan pekerjaan dalam waktu ....",
+    "options" => [
+        ["option" => number_format($mathVariable['f'])." jam", "isTrue" => 0],
+        ["option" => number_format($mathVariable['e'])." jam", "isTrue" => 0],
+        ["option" => number_format($mathVariable['d'])." jam", "isTrue" => 1],
+        ["option" => number_format($mathVariable['g'])." jam", "isTrue" => 0],
+        ["option" => number_format($mathVariable['h'])." jam", "isTrue" => 0],
+    ],
+];
+
+$mathVariable['a'] = ["matematika", "bahasa Indonesia", "bahasa Inggris", "sejarah", "sosiologi", "biologi", "kimia", "fisika"];
+$mathVariable['b'] = $mathVariable['a'][random_int(0,7)];
+$mathVariable['c'] = random_int(10,50);
+while (!isPrime($mathVariable['c'])){
+	$mathVariable['c'] = random_int(10,50);
+}
+$mathVariable['d'] = random_int(70,90) + $mathVariable['c'] / 100;
+$mathVariable['e'] = ($mathVariable['d'] * $mathVariable['c'] + (random_int(70,90) + random_int(10,90) / 10 + random_int(10,50) / 100)) / ($mathVariable['c'] + 1);
+// correct answer
+$mathVariable['f'] = $mathVariable['e'] * ($mathVariable['c'] + 1) - $mathVariable['d'] * $mathVariable['c'];
+// distraktor
+$mathVariable['g'] = $mathVariable['e'] * ($mathVariable['c'] + 1) - $mathVariable['d'] * $mathVariable['c'] - 2;
+$mathVariable['h'] = $mathVariable['e'] * ($mathVariable['c'] + 1) - $mathVariable['d'] * $mathVariable['c'] + 2;
+$mathVariable['i'] = $mathVariable['e'] * ($mathVariable['c'] + 1) - $mathVariable['d'] * $mathVariable['c'] - 1;
+$mathVariable['j'] = $mathVariable['e'] * ($mathVariable['c'] + 1) - $mathVariable['d'] * $mathVariable['c'] + 1;
+// question
+$itemArray[9] = [
+    "number" => 10,
+    "question" => "Rata-rata nilai ulangan ".$mathVariable['b']." dari ".$mathVariable['c']." siswa adalah ".$mathVariable['d'].". Jika nilai Cahyo digabung dengan nilai mereka, maka rata-rata nilai menjadi ".number_format($mathVariable['e'],2).". Nilai ulangan Cahyo adalah ....",
+    "options" => [
+        ["option" => number_format($mathVariable['f'],2), "isTrue" => 1],
+        ["option" => number_format($mathVariable['g'],2), "isTrue" => 0],
+        ["option" => number_format($mathVariable['h'],2), "isTrue" => 0],
+        ["option" => number_format($mathVariable['i'],2), "isTrue" => 0],
+        ["option" => number_format($mathVariable['j'],2), "isTrue" => 0],
+    ],
+];
+
+$mathVariable['a'] = random_int(5, 11);
+$mathVariable['b'] = random_int(6, 9) + random_int(1,9) / 10;
+$mathVariable['c'] = false;
+$jumlahAktualNilai = $mathVariable['b'] * $mathVariable['a'];
+$jumlahNilai = 0;
+$arrayNilai = [];
+do {
+    for ($i=0; $i < $mathVariable['a']; $i++) { 
+        $arrayNilai[$i] = random_int(1,9) + random_int(1,9) / 10;
+    }
+    $jumlahNilai = array_sum($arrayNilai);
+} while ($jumlahNilai !== $jumlahAktualNilai);
+// correct answer
+$mathVariable['d'] = implode(', ', $arrayNilai);
+// distraktor
+function initDistractorArray() {
+	global $mathVariable, $arrayNilai;
+    $distraktorArray = [];
+    for ($i=0; $i < $mathVariable['a']; $i++) {
+    if (random_int(0,1) === 1){
+        $distraktorArray[$i] = $arrayNilai[$i] + 1;
+        } else $distraktorArray[$i] = $arrayNilai[$i]; 
+    }
+    return $distraktorArray;   
+}
+$mathVariable['e'] = implode(', ',initDistractorArray());
+$mathVariable['f'] = implode(', ',initDistractorArray());
+$mathVariable['g'] = implode(', ',initDistractorArray());
+$mathVariable['h'] = implode(', ',initDistractorArray());
+// question
+$itemArray[10] = [
+    "number" => 11,
+    "question" => "Rata-rata nilai dari ".$mathVariable['a']." siswa adalah ".$mathVariable['b'].". Himpunan nilai siswa adalah ....",
+    "options" => [
+        ["option" => "{".$mathVariable['h']."}", "isTrue" => 0],
+        ["option" => "{".$mathVariable['g']."}", "isTrue" => 0],
+        ["option" => "{".$mathVariable['f']."}", "isTrue" => 0],
+        ["option" => "{".$mathVariable['e']."}", "isTrue" => 0],
+        ["option" => "{".$mathVariable['d']."}", "isTrue" => 1],
+    ],
+];
 ?>
