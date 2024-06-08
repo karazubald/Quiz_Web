@@ -1386,7 +1386,7 @@ $mathVariable['i'] = $mathVariable['e'] * 4/10;
 $itemArray[15] = [
     "number" => 16,
     "question" =>
-        "Data pangsa pasar dikelompokkan dalam format {tahun-bulan => {merk => persentase}}. Berikut data pangsa pasar antara bulan Januari sampai Desember 2020.\n".$mathVariable['b'].". Berapa persen rata-rata pangsa pasar dari merk ".$mathVariable['d']."?",
+        "Data pangsa pasar dikelompokkan dalam format {tahun-bulan => {merk => persentase}}. Berikut data pangsa pasar tahun 2020.\n".$mathVariable['b'].". Berapa persen rata-rata pangsa pasar dari merk ".$mathVariable['d']."?",
     "options" => [
         ["option" => number_format($mathVariable["i"] * 100, 2, ",")."%", "isTrue" => 0],
         ["option" => number_format($mathVariable["h"] * 100, 2, ",")."%", "isTrue" => 0],
@@ -1455,11 +1455,169 @@ $itemArray[16] = [
     "question" =>
         "Data pangsa pasar dikelompokkan dalam format {tahun-bulan => {merk => persentase}}. Berikut data pangsa pasar pada tahun 2020.\n".$mathVariable['b'].". Berdasarkan data tersebut merk yang memiliki pangsa pasar dengan persentase ".($mathVariable['g'][1] * 100)."% pada bulan ".$mathVariable['d']." adalah ....",
     "options" => [
-        ["option" => $mathVariable["g"][0], "isTrue" => 1],
-        ["option" => $mathVariable["h"][random_int(0,8)], "isTrue" => 0],
-        ["option" => $mathVariable["h"][random_int(9, 17)], "isTrue" => 0],
-        ["option" => $mathVariable["h"][random_int(18, 26)], "isTrue" => 0],
-        ["option" => $mathVariable["h"][random_int(27, count($mathVariable['h'])-1)], "isTrue" => 0],
+        ["option" => $mathVariable["g"][0][0], "isTrue" => 1],
+        ["option" => $mathVariable["h"][random_int(0,8)][0], "isTrue" => 0],
+        ["option" => $mathVariable["h"][random_int(9, 17)][0], "isTrue" => 0],
+        ["option" => $mathVariable["h"][random_int(18, 26)][0], "isTrue" => 0],
+        ["option" => $mathVariable["h"][random_int(27, count($mathVariable['h'])-1)][0], "isTrue" => 0],
+    ],
+];
+
+$mathVariable['a'] = [random_int(4,6), random_int(10,50)];
+$mathVariable['b'] = [$mathVariable['a'][0] + random_int(1,3), random_int(10,50)];
+$mathVariable['c'] = random_int(40,80);
+$mathVariable['d'] = ($mathVariable['b'][0] * 60 + $mathVariable['b'][1]) - ($mathVariable['a'][0] * 60 + $mathVariable['a'][1]);
+// correct_answer
+$mathVariable['e'] = $mathVariable['d'] / 60 * $mathVariable['c'];
+// distractor
+$mathVariable['f'] = $mathVariable['c'];
+$mathVariable['g'] = $mathVariable['e'] + random_int(1,2) * 10;
+$mathVariable['h'] = $mathVariable['e'] - random_int(1,2) * 10;
+$mathVariable['i'] = $mathVariable['e'] + (random_int(0,1) === 0 ? $mathVariable['c']/2 : $mathVariable['c']/(-2));
+// question
+$itemArray[17] = [
+    "number" => 18,
+    "question" =>
+        "Rini berangkat dari rumahnya ke kantor menggunakan sepeda motor pada pukul 0".$mathVariable['a'][0].".".$mathVariable['a'][1]." dan sampai pada pukul 0".$mathVariable['b'][0].".".$mathVariable['b'][1].". Apabila Rini berkendara dengan kecepatan rata-rata ".$mathVariable['c']." km/jam, maka jarak kantor dari rumah Rini adalah ....",
+    "options" => [
+        ["option" => number_format($mathVariable['f']), "isTrue" => 0],
+        ["option" => number_format($mathVariable['g']), "isTrue" => 0],
+        ["option" => number_format($mathVariable['e']), "isTrue" => 1],
+        ["option" => number_format($mathVariable['h']), "isTrue" => 0],
+        ["option" => number_format($mathVariable['i']), "isTrue" => 0],
+    ],
+];
+
+$mathVariable['a'] = [random_int(1,28), random_int(1,12), random_int(1990, 2010)];
+$mathVariable['b'] = [random_int(1,28), random_int(1,12), $mathVariable['a'][2] + random_int(1,50)];
+$mathVariable['c'] = [];
+for($i = 0; $i < count($mathVariable['a']); $i++){
+    $mathVariable['c'][$i] = $mathVariable['b'][$i] - $mathVariable['a'][$i];
+}
+$mathVariable['a'] = implode("-", $mathVariable['a']);
+$mathVariable['b'] = implode("-", $mathVariable['b']);
+// correct_answer
+if ($mathVariable['c'][0] < 0) {
+    $mathVariable['c'][1] -= 1;
+    $mathVariable['c'][0] += 30;
+}
+if ($mathVariable['c'][1] < 0){
+    $mathVariable['c'][2] -= 1;
+    $mathVariable['c'][1] += 12;
+}
+// distractor
+$mathVariable['d'] = [];
+$mathVariable['e'] = [];
+$mathVariable['f'] = [];
+$mathVariable['g'] = [];
+for ($i=0; $i < count($mathVariable['c']); $i++) {
+    do {
+        $mathVariable['d'][$i] = abs($mathVariable['c'][$i] + random_int(-2, 2));
+        $mathVariable['e'][$i] = abs($mathVariable['c'][$i] - random_int(-2, 2));
+        $mathVariable['f'][$i] = abs($mathVariable['d'][$i] + random_int(-3, 3));
+        $mathVariable['g'][$i] = abs($mathVariable['d'][$i] - random_int(-3, 3));
+
+        $equalCorrectAnswer = ($mathVariable['d'][$i] === $mathVariable['c'][$i]) && ($mathVariable['e'][$i] === $mathVariable['c'][$i]) && ($mathVariable['f'][$i] === $mathVariable['c'][$i]) && ($mathVariable['g'][$i] === $mathVariable['c'][$i]);
+
+        $equalZero = ($mathVariable['d'] === 0) || ($mathVariable['e'] === 0) || ($mathVariable['f'] === 0) || ($mathVariable['g'] === 0);
+    } while (!$equalCorrectAnswer || !$equalZero);
+}
+// question
+$itemArray[18] = [
+    "number" => 19,
+    "question" =>
+        "{Nama: Erin; Tanggal lahir: ".$mathVariable['a']."; Tanggal hari ini: ".$mathVariable['b']."}. Berdasarkan data tersebut, usia Erin adalah .... ",
+    "options" => [
+        ["option" => $mathVariable['d'][2]." tahun ".$mathVariable['d'][1]." bulan ".$mathVariable['d'][0]." hari", "isTrue" => 0],
+        ["option" => $mathVariable['e'][2]." tahun ".$mathVariable['e'][1]." bulan ".$mathVariable['e'][0]." hari", "isTrue" => 0],
+        ["option" => $mathVariable['f'][2]." tahun ".$mathVariable['f'][1]." bulan ".$mathVariable['f'][0]." hari", "isTrue" => 0],
+        ["option" => $mathVariable['c'][2]." tahun ".$mathVariable['c'][1]." bulan ".$mathVariable['c'][0]." hari", "isTrue" => 1],
+        ["option" => $mathVariable['g'][2]." tahun ".$mathVariable['g'][1]." bulan ".$mathVariable['g'][0]." hari", "isTrue" => 0],
+    ],
+];
+
+$mathVariable['a'] = ["IPS" => 0, "IPA" => 0, "Bahasa Inggris" => 0, "Bahasa Indonesia" => 0, "Seni Budaya" => 0, "Penjaskes" => 0, "Bahasa Mandarin" => 0, "Bahasa Daerah" => 0];
+$mathVariable['b'] = random_int(100, 1500);
+do {
+  foreach($mathVariable['a'] as $key => $value){
+    $mathVariable['a'][$key] = random_int(10,$mathVariable['b']/2-10);
+  }
+} while (array_sum($mathVariable['a']) !== $mathVariable['b']);
+$mathVariable['c'] = $mathVariable['a'];
+foreach($mathVariable['a'] as $key => $value){
+    $percentageValue = round($value/$mathVariable['b']*100, 2);
+    $mathVariable['c'][$key] = $percentageValue;
+}
+$mathVariable['d'] = json_encode($mathVariable['c']);
+$mathVariable['e'] = random_int(1,80);
+while (is_float($mathVariable['b'] * $mathVariable['e']/100) || $mathVariable['e'] === 50){
+  $mathVariable['e'] = random_int(1,80);
+};
+$mathVariable['e'] /= 100;
+// correct_answer
+$mathVariable['f'] = $mathVariable['e'] * $mathVariable['b'];
+// distraktor
+$mathVariable['g'] = round((1-$mathVariable['e']) * $mathVariable['b']);
+do {
+$mathVariable['h'] = $mathVariable['a'][array_rand($mathVariable['a'])];
+$mathVariable['i'] = round($mathVariable['c'][array_rand($mathVariable['c'])]/100 * $mathVariable['b']);
+$mathVariable['j'] = round((1-$mathVariable['c'][array_rand($mathVariable['c'])]/100) * $mathVariable['b']);
+
+    $equalCorrectAnswer = ($mathVariable['h'] === $mathVariable['f']) || ($mathVariable['i'] === $mathVariable['f']) || ($mathVariable['j'] === $mathVariable['f']);
+} while ($equalCorrectAnswer);
+// question
+$itemArray[19] = [
+    "number" => 20,
+    "question" =>
+        "Data minat dari ".$mathVariable['b']." siswa pada 8 mata pelajaran di daerah X dikelompokkan dalam format berikut {\"mata_pelajaran\": persentase_minat}: ".$mathVariable['d'].". Apabila ".number_format(100 - $mathVariable['e'] * 100)."% dari siswa yang didata berjenis kelamin perempuan, maka jumlah siswa yang berjenis kelamin laki-laki adalah ....",
+    "options" => [
+        ["option" => round($mathVariable['f']), "isTrue" => 1],
+        ["option" => round($mathVariable['g']), "isTrue" => 0],
+        ["option" => round($mathVariable['h']), "isTrue" => 0],
+        ["option" => round($mathVariable['i']), "isTrue" => 0],
+        ["option" => round($mathVariable['j']), "isTrue" => 0],
+    ],
+];
+
+$mathVariable['e'] = [array_rand($mathVariable['a']), random_int(3,21)];
+$mathVariable['b'] += $mathVariable['e'][1];
+$mathVariable['f'] = [];
+do {
+    $mathVariable['f'][0] = $mathVariable['a'][array_rand($mathVariable['a'])];
+} while ($mathVariable['f'][0] === $mathVariable['e'][0]);
+foreach($mathVariable['a'] as $key => $value){
+  if($key === $mathVariable['e'][0]) {
+    $mathVariable['a'][$key] = $value + $mathVariable['e'][1];
+  }
+  $percentageValue = round($value/$mathVariable['b']*100, 2);
+  $mathVariable['c'][$key] = $percentageValue;
+}
+// correct_answer
+foreach($mathVariable['c'] as $key => $value){
+    if($key === $mathVariable['e'][0]){
+        $mathVariable['f'][1] = $value;
+    }
+}
+// distractor
+do {
+$mathVariable['g'] = $mathVariable['c'][array_rand($mathVariable['c'])] + random_int(0,1)/10;
+$mathVariable['h'] = $mathVariable['c'][array_rand($mathVariable['c'])] - random_int(1,2)/10;
+$mathVariable['i'] = $mathVariable['c'][array_rand($mathVariable['c'])] + random_int(1,10)/10;
+$mathVariable['j'] = 1 - $mathVariable['c'][array_rand($mathVariable['c'])];
+
+$equalCorrectAnswer = ($mathVariable['g'] === $mathVariable['f'][1]) || ($mathVariable['h'] === $mathVariable['f'][1]) || ($mathVariable['i'] === $mathVariable['f'][1]);
+} while ($equalCorrectAnswer);
+// question
+$itemArray[20] = [
+    "number" => 21,
+    "question" =>
+        "Data minat dari ".$mathVariable['b']." siswa pada 8 mata pelajaran di daerah X dikelompokkan dalam format berikut {\"mata_pelajaran\": persentase_minat}: ".$mathVariable['d'].". Apabila data yang ada diperbarui dengan ditambahkan ".$mathVariable['e'][1]." siswa yang berminat dengan mata pelajaran ".$mathVariable['e'][0]." maka persentase siswa dengan minat mata pelajaran ".$mathVariable['f'][0]." menjadi ....",
+    "options" => [
+        ["option" => round($mathVariable['f']), "isTrue" => 1],
+        ["option" => round($mathVariable['g']), "isTrue" => 0],
+        ["option" => round($mathVariable['h']), "isTrue" => 0],
+        ["option" => round($mathVariable['i']), "isTrue" => 0],
+        ["option" => round($mathVariable['j']), "isTrue" => 0],
     ],
 ];
 ?>
