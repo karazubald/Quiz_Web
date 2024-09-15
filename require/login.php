@@ -36,7 +36,8 @@ if( isset($_POST["submit"]) ) {
             <input type="text" name="passwd" id="passwd" placeholder="Your Password">
             <button type="submit" name="submit" value="login">Login</button>
         </form>
-        <button type="button" onclick='window.location = "signup.php"'>Saya pengguna baru, ingin mendaftarkan diri!</button>
+        <button type="button" onclick='window.location = "signup.php"'>Pengguna Baru? Daftar Sekarang!</button>
+        <button type="button" onclick='window.location = "../index.php"'>Kembali ke Halaman Utama</button>
     </single-box>
 </body>
 </html>

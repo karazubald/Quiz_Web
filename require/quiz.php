@@ -20,7 +20,7 @@
             Timer is set in here!
         </div>
         <script>
-            timer(6,document.getElementById("timer-area"));
+            timer(60,document.getElementById("timer-area"));
         </script>
         <questions-idx id="question-idx">
             <script>
@@ -38,15 +38,22 @@
     </quiz-area>
 
     <submission-area id="submission-area">
-        <button type="button" onclick="
+        <button type="button" onclick='
             console.clear();
+            let str_out = "";
             for(let index = 0; index < Object.keys(userResponseJSON).length; index++) {
                 if(userResponseJSON[index].checkedOption){
+                    str_out += Number(index+1)+" => "+JSON.stringify(userResponseJSON[index])+"\n";
                     console.log(userResponseJSON[index]);
                 }
-            }
-        ">OUTPUT USER JSON</button>
-        <button type="button" onclick="sendUserResponse()">
+            };
+            window.alert(str_out);
+        '>OUTPUT USER JSON</button>
+        <button type="button" onclick='
+            console.log(userResponseJSON);
+            saveUserResponse(userResponseJSON, "result.php");
+            window.location.href = "result.php";
+        '>
             SEND DATA
         </button>
     </submission-area>

@@ -22,11 +22,11 @@ if (isset($_POST["submit"])) {
 
     $isRegisteredUser = checkDataRef($jsonRef, $uniqueID);
     if ($isRegisteredUser) {
-        echo '<script>console.log("Nama anda sudah terdaftar sebagai user. Silakan menuju halaman login!")</script>';
+        echo '<script>window.alert("Nama anda sudah terdaftar sebagai user. Silakan menuju halaman login!")</script>';
         exit();
     }
     if (!$isRegisteredUser) {
-        echo '<script>console.log("Nama anda belum terdaftar sebagai user!")</script>';
+        echo '<script>window.alert("Nama anda belum terdaftar sebagai user!")</script>';
         writeDataRef($newUserArray,$jsonRef);
     }
 
@@ -53,6 +53,7 @@ if (isset($_POST["submit"])) {
             <button type="submit" name="submit" value="login">Sign Up</button>
         </form>
         <button type="button" onclick='window.location = "login.php"'>Kembali ke Halaman Masuk</button>
+        <button type="button" onclick='window.location = "../index.php"'>Kembali ke Halaman Utama</button>
     </single-box>
 </body>
 </html>

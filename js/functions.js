@@ -135,29 +135,8 @@ function generateOptions(questionIndex){
 }
 
 /**
- * Send user response to result.php.
- */
-function sendUserResponse(){
-    let targetPHP = "result.php";
-    let responseData = JSON.stringify(userResponseJSON);
-    fetch(targetPHP, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: responseData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json()
-    })
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
-}
-
-/**
  * Generate a countdown timer and displayed the remaining seconds to timerText.
- * @param {Number} seconds The number of seconds, starting from 0.
+ * @param {Number} seconds The number of minutes, starting from 0.
  * @param {Element} timerElement A html element for displaying timer.
  */
 function timer(seconds, timerElement) {
@@ -171,4 +150,38 @@ function timer(seconds, timerElement) {
             clearInterval(interval);
         }
     },1000);
+}
+
+/**
+ * Send user response to result.php.
+ * @param {JSON} jsonObject JSON to be sent
+ * @param {string} page URL or web page
+ */
+function saveUserResponse(jsonObject, page){
+    // let jsonForm = new FormData();
+    // jsonForm.set("userResponse", JSON.stringify(jsonObject));
+    // let ajax = new XMLHttpRequest();
+    // ajax.open("POST", page, true); // sending as POST
+    // ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); // set header
+    // ajax.send(jsonForm); // send as form
+
+    // Fetch API
+    fetch(page, {
+        method: 'POST',
+        credentials: "include", // send cookies
+        body: JSON.stringify(jsonObject), // data can be `string` or {object}!
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }).then(response => {
+        console.log(response); // Debug response
+        return response.json();
+    })
+    .then(function (stringData){
+        console.log(stringData); // Debug response data
+    })
+    .catch(function (error){
+        console.error(error); // Log errors
+    })
 }

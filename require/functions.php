@@ -32,7 +32,9 @@ function writeDataRef($associativeArrayData, $filename){
     
     array_merge($jsonData, $associativeArrayData);
     $jsonData = json_encode($jsonData);
-    file_put_contents($fileRef, $jsonData);
+    $overwrittenContent = file_get_contents($fileRef, $jsonData);
+    
+    echo 'window.alert('.$overwrittenContent.');';
 }
 
 /**

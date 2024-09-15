@@ -1613,11 +1613,12 @@ $itemArray[20] = [
     "question" =>
         "Data minat dari ".$mathVariable['b']." siswa pada 8 mata pelajaran di daerah X dikelompokkan dalam format berikut {\"mata_pelajaran\": persentase_minat}: ".$mathVariable['d'].". Apabila data yang ada diperbarui dengan ditambahkan ".$mathVariable['e'][1]." siswa yang berminat dengan mata pelajaran ".$mathVariable['e'][0]." maka persentase siswa dengan minat mata pelajaran ".$mathVariable['f'][0]." menjadi ....",
     "options" => [
-        ["option" => round($mathVariable['f']), "isTrue" => 1],
-        ["option" => round($mathVariable['g']), "isTrue" => 0],
-        ["option" => round($mathVariable['h']), "isTrue" => 0],
-        ["option" => round($mathVariable['i']), "isTrue" => 0],
-        ["option" => round($mathVariable['j']), "isTrue" => 0],
+        ["option" => round($mathVariable['f'][1],2), "isTrue" => 1],
+        ["option" => round($mathVariable['g'],2), "isTrue" => 0],
+        ["option" => round($mathVariable['h'],2), "isTrue" => 0],
+        ["option" => round($mathVariable['i'],2), "isTrue" => 0],
+        ["option" => round($mathVariable['j'],2), "isTrue" => 0],
     ],
 ];
+
 ?>
