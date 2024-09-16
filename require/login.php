@@ -2,16 +2,16 @@
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 require 'functions.php';
+session_start();
 // if button submit is pressed, evaluate $_POST variable
 if( isset($_POST["submit"]) ) {
     $jsonRef = "../data/dataref.json"; // json reference
     $user = checkDataRef($jsonRef, $_POST["usrname"]);
-    $passwd = checkDataRef($jsonRef, md5($_POST["passwd"], false));
+    $passwd = checkDataRef($jsonRef, $_POST["passwd"]);
 
     if($user && $passwd) {
-        session_start();
         $_SESSION["usrname"] = $_POST["usrname"];
-        header('Location:../index.php');
+        header('Location: ../index.php');
         exit;
     } else {
         echo '<script>console.log("Data not found!")</script>';

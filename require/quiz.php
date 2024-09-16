@@ -1,6 +1,19 @@
 <?php
     require 'functions.php';
-    
+    session_start();
+    $_SESSION['userResponse'] = "";
+
+    $directoryRef = __DIR__ ;
+    $script = file_get_contents($directoryRef."/../js/functions.js");
+    echo '<script>'.$script.'</script>';
+    echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
+
+    if( isset($_POST["submit"]) ){
+        echo '<script>console.log("Submit press detected!")</script>';
+        $_SESSION['userResponse'] = json_decode($items, true);
+        header('Location:result.php');
+        exit;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +24,7 @@
     <title>QUIZ</title>
 </head>
 <body>
-    <script type="text/javascript" src="../js/functions.js"></script>
-    <?php
-        echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
-    ?>
+    <!-- <script type="text/javascript" src="../js/functions.js"></script> -->
     <quiz-area>
         <div id="timer-area">
             Timer is set in here!
@@ -49,13 +59,10 @@
             };
             window.alert(str_out);
         '>OUTPUT USER JSON</button>
-        <button type="button" onclick='
-            console.log(userResponseJSON);
-            saveUserResponse(userResponseJSON, "result.php");
-            window.location.href = "result.php";
-        '>
-            SEND DATA
-        </button>
+        <form action="" method="post">
+            <button type="submit" name="submit">SEND DATA</button>
+        </form>
+            
     </submission-area>
 </body>
 </html>
