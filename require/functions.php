@@ -29,12 +29,13 @@ function writeDataRef($associativeArrayData, $filename){
     $directoryRef = __DIR__;
     $fileRef = file_get_contents($directoryRef.'/'.$filename);
     $jsonData = readDataRef($filename);
+    echo '<script>console.log('.$jsonData.')</script>';
     
     array_merge($jsonData, $associativeArrayData);
     $jsonData = json_encode($jsonData);
-    $overwrittenContent = file_get_contents($fileRef, $jsonData);
+    $overwrittenContent = file_put_contents($fileRef, $jsonData);
     
-    echo 'window.alert('.$overwrittenContent.');';
+    // echo 'window.alert('.$overwrittenContent.');';
 }
 
 /**

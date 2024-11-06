@@ -12,9 +12,10 @@ if( isset($_POST["submit"]) ) {
     if($user && $passwd) {
         $_SESSION["usrname"] = $_POST["usrname"];
         header('Location: ../index.php');
-        exit;
+        exit();
     } else {
         echo '<script>console.log("Data not found!")</script>';
+        echo '<script>window.alert("Data not found!")</script>';
     }
 }
 ?>

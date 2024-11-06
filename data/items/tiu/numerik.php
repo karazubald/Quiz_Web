@@ -1579,6 +1579,7 @@ $itemArray[19] = [
     ],
 ];
 
+$mathVariable['a'] = ["IPS" => 0, "IPA" => 0, "Bahasa Inggris" => 0, "Bahasa Indonesia" => 0, "Seni Budaya" => 0, "Penjaskes" => 0, "Bahasa Mandarin" => 0, "Bahasa Daerah" => 0];
 $mathVariable['e'] = [array_rand($mathVariable['a']), random_int(3,21)];
 $mathVariable['b'] += $mathVariable['e'][1];
 $mathVariable['f'] = [];

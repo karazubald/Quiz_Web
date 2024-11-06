@@ -3,16 +3,19 @@
     session_start();
     $_SESSION['userResponse'] = "";
 
-    $directoryRef = __DIR__ ;
-    $script = file_get_contents($directoryRef."/../js/functions.js");
-    echo '<script>'.$script.'</script>';
-    echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
+    $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+    if ($contentType === "application/json") {
+        $content = trim(file_get_contents("php://input"));
+        $decoded = json_decode($content, true);
+        echo '<script>console.log('.$decoded.')</script>';
+        $_SESSION["usrname"] = $decoded;
+    }
 
     if( isset($_POST["submit"]) ){
-        echo '<script>console.log("Submit press detected!")</script>';
-        $_SESSION['userResponse'] = json_decode($items, true);
+        $_SESSION['userResponse'] = json_decode(json_encode($items, JSON_FORCE_OBJECT), true);
+        
         header('Location:result.php');
-        exit;
+        exit();
     }
 ?>
 <!DOCTYPE html>
@@ -24,7 +27,12 @@
     <title>QUIZ</title>
 </head>
 <body>
-    <!-- <script type="text/javascript" src="../js/functions.js"></script> -->
+    <?php
+        $directoryRef = __DIR__ ;
+        $script = file_get_contents($directoryRef."/../js/functions.js");
+        echo '<script>'.$script.'</script>';
+        echo '<script>initItemObject('.json_encode($items, JSON_FORCE_OBJECT).')</script>';
+    ?>
     <quiz-area>
         <div id="timer-area">
             Timer is set in here!

@@ -153,18 +153,11 @@ function timer(seconds, timerElement) {
 }
 
 /**
- * Send user response to result.php.
+ * Send object to another page.
  * @param {JSON} jsonObject JSON to be sent
  * @param {string} page URL or web page
  */
-function saveUserResponse(jsonObject, page){
-    // let jsonForm = new FormData();
-    // jsonForm.set("userResponse", JSON.stringify(jsonObject));
-    // let ajax = new XMLHttpRequest();
-    // ajax.open("POST", page, true); // sending as POST
-    // ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); // set header
-    // ajax.send(jsonForm); // send as form
-
+function sendObjectTo(jsonObject, page){
     // Fetch API
     fetch(page, {
         method: 'POST',
@@ -176,7 +169,9 @@ function saveUserResponse(jsonObject, page){
         }
     }).then(response => {
         console.log(response); // Debug response
-        return response.json();
+        // return response.json();
+        // redirect
+        window.location = page;
     })
     .then(function (stringData){
         console.log(stringData); // Debug response data

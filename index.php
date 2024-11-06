@@ -8,6 +8,7 @@ session_start();
 if(!isset($_SESSION["usrname"])){
     $_SESSION["usrname"] = "Anonymous";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +17,15 @@ if(!isset($_SESSION["usrname"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>VANILLA QUIZ WEB APPLICATION</title>
-    <script src="js/functions.js"></script>
 </head>
 <body>
+    <?php
+        $directoryRef = __DIR__ ;
+        $script = file_get_contents($directoryRef."/js/functions.js");
+        echo '<script>'.$script.'</script>';
+        echo '<script>let sessionUsername = "'.$_SESSION["usrname"].'"</script>'; 
+    ?>
+    
     <holy-grail-flexbox>
         <header class="header">
             Vanilla Quiz Web Application
@@ -26,7 +33,8 @@ if(!isset($_SESSION["usrname"])){
 
         <main class="main-content">
             <card-box>
-                <button class="quiz-btn" type="button" onclick='window.location = "require/quiz.php"'>
+                <button class="quiz-btn" type="button" 
+                onclick='sendObjectTo(sessionUsername, "require/quiz.php")'>
                     Test_QUIZ
                 </button>
             </card-box>
@@ -37,7 +45,8 @@ if(!isset($_SESSION["usrname"])){
                 Greetings, <?= $_SESSION["usrname"] ?>!
             </greet-user>
             <div>
-                <button class="login-btn" type="button" onclick='window.location = "require/login.php"'>
+                <button class="login-btn" type="button" 
+                onclick='window.location = "require/login.php"'>
                     <?php echo setLogButtonText($_SESSION["usrname"]) ?>
                 </button>
             </div>

@@ -1,17 +1,8 @@
 <?php
     require 'functions.php';
     session_start();
-    $userResult = "No response found!";
-    if(isset($_SESSION['userResponse']) || $_SESSION['userResponse'] !== ""){
-        $userResult = $_SESSION['userResponse'];
-    } 
-    else {
-        echo '<script>alert("No data is stored in session!");</script>';
-    }
-    // $in = file_get_contents('php://input');
-    // if ($in === "") $recorded = "Nothing is read, null value detected!"; else $recorded = json_decode($in, true);
-    
-    // $recorded = json_decode($_POST["userResponse"], true);
+    $userResult = serialize($_SESSION['userResponse']);
+    echo '<script>console.log(JSON.stringify('.json_encode($_SESSION['userResponse']).'))</script>';
 ?>
 <!DOCTYPE html>
 <html lang="en">

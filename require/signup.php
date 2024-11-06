@@ -7,8 +7,8 @@ require "functions.php";
 if (isset($_POST["submit"])) {
     $jsonRef = "../data/dataref.json"; // json reference
     $user = $_POST["aName"];
-    $uniqueID = md5($_POST["nik"], false);
-    $passwd = md5(trim($_POST["passwd"]), false);
+    $uniqueID = $_POST["nik"];
+    $passwd = $_POST["passwd"];
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $newUserArray = [
         $user => [
@@ -23,7 +23,8 @@ if (isset($_POST["submit"])) {
     $isRegisteredUser = checkDataRef($jsonRef, $uniqueID);
     if ($isRegisteredUser) {
         echo '<script>window.alert("Nama anda sudah terdaftar sebagai user. Silakan menuju halaman login!")</script>';
-        exit();
+        //header('Location:login.php');
+        //exit();
     }
     if (!$isRegisteredUser) {
         echo '<script>window.alert("Nama anda belum terdaftar sebagai user!")</script>';
@@ -47,7 +48,7 @@ if (isset($_POST["submit"])) {
         </div>
         <form action="" method="POST">
             <input type="text" name="aName" id="aName" placeholder="Nama Anda">
-            <input type="text" name="nik" id="nik" placeholder="16 digit nomor KTP" minlength="16" maxlength="16">
+            <input type="text" name="nik" id="nik" placeholder="16 digit nomor KTP" minlength="10" maxlength="16">
             <input type="text" name="email" id="email" placeholder="Email">
             <input type="text" name="passwd" id="passwd" placeholder="Kata Sandi" minlength="3">
             <button type="submit" name="submit" value="login">Sign Up</button>
