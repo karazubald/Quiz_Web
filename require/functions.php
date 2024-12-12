@@ -2,8 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 
+//-----------------------------------------------------
+// TODO: Load items here!
 // Items to be loaded
-$items = readDataRef("../data/items/tiu/sinonim.json");
+$items = readDataRef("../data/items/tiu/analogi.json");
+//-----------------------------------------------------
 
 /**
  * Obtain data from filename as an array.
@@ -34,8 +37,6 @@ function writeDataRef($associativeArrayData, $filename){
     array_merge($jsonData, $associativeArrayData);
     $jsonData = json_encode($jsonData);
     $overwrittenContent = file_put_contents($fileRef, $jsonData);
-    
-    // echo 'window.alert('.$overwrittenContent.');';
 }
 
 /**

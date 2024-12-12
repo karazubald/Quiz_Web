@@ -1,8 +1,20 @@
 <?php
     require 'functions.php';
     session_start();
-    $userResult = serialize($_SESSION['userResponse']);
-    echo '<script>console.log(JSON.stringify('.json_encode($_SESSION['userResponse']).'))</script>';
+
+    $_POST["userResponse"] = "Not set or not successfully loaded!";
+
+    $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+    if ($contentType === "application/json") {
+        $content = trim(file_get_contents("php://input"));
+        $decoded = json_decode($content, true);
+        $_POST["userResponse"] = $decoded;
+
+        echo '<script>console.log(JSON.stringify('.json_encode($_POST['userResponse']).'))</script>';
+    }
+
+    $userResult = serialize($_POST['userResponse']);
+    // echo '<script>console.log(JSON.stringify('.json_encode($_SESSION['userResponse']).'))</script>';
 ?>
 <!DOCTYPE html>
 <html lang="en">

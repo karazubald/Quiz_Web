@@ -34,7 +34,7 @@ if(!isset($_SESSION["usrname"])){
         <main class="main-content">
             <card-box>
                 <button class="quiz-btn" type="button" 
-                onclick='sendObjectTo(sessionUsername, "require/quiz.php")'>
+                onclick='sendObjectTo(sessionUsername, "require/quiz.php", true)'>
                     Test_QUIZ
                 </button>
             </card-box>
@@ -46,7 +46,7 @@ if(!isset($_SESSION["usrname"])){
             </greet-user>
             <div>
                 <button class="login-btn" type="button" 
-                onclick='window.location = "require/login.php"'>
+                onclick='window.location.href = "require/login.php"'>
                     <?php echo setLogButtonText($_SESSION["usrname"]) ?>
                 </button>
             </div>

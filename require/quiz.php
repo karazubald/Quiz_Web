@@ -12,11 +12,14 @@
     }
 
     if( isset($_POST["submit"]) ){
+
         $_SESSION['userResponse'] = json_decode(json_encode($items, JSON_FORCE_OBJECT), true);
         
         header('Location:result.php');
         exit();
     }
+
+    echo '<script>console.log("'.$_SESSION["usrname"].'");</script>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +30,7 @@
     <title>QUIZ</title>
 </head>
 <body>
+    <!-- <script type="text/javascript" src="../js/functions.js"></script> -->
     <?php
         $directoryRef = __DIR__ ;
         $script = file_get_contents($directoryRef."/../js/functions.js");

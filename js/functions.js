@@ -121,6 +121,9 @@ function generateOptions(questionIndex){
                 if(answerRadio.checked){
                     userResponseJSON[questionIndex].checkedOption = answerRadio.getAttribute("value");
                     userResponseJSON[questionIndex].optionText = document.getElementById("optLabel-"+answerRadio.id).textContent;
+
+                    // Update and send answer immediately to result page
+                    sendObjectTo(userResponseJSON, "result.php", false);
                 }
             });
         })
@@ -153,30 +156,35 @@ function timer(seconds, timerElement) {
 }
 
 /**
- * Send object to another page.
- * @param {JSON} jsonObject JSON to be sent
+ * Send JSON object to another page using Fetch API.
+ * @param {JSON} jsonObject JSON to be sent.
  * @param {string} page URL or web page
+ * @param {boolean} redirection true to go to the page, false to stay in the current page 
  */
-function sendObjectTo(jsonObject, page){
+function sendObjectTo(jsonObject, page, redirection){
     // Fetch API
     fetch(page, {
         method: 'POST',
-        credentials: "include", // send cookies
-        body: JSON.stringify(jsonObject), // data can be `string` or {object}!
+        credentials: 'include', //to send cookies
+        body: JSON.stringify(jsonObject),
         headers:{
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
     }).then(response => {
-        console.log(response); // Debug response
-        // return response.json();
-        // redirect
-        window.location = page;
+        // Debug response
+        console.log(response); 
+        // redirect only if it is set to true!
+        if(redirection){
+            window.location = page;
+        }
     })
     .then(function (stringData){
-        console.log(stringData); // Debug response data
+        // Debug response data
+        console.log(stringData); 
     })
     .catch(function (error){
-        console.error(error); // Log errors
+        // Log errors
+        console.error(error);
     })
 }
